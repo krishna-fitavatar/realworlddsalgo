@@ -1,0 +1,24 @@
+{
+  "structure": "treap",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "boostorg/intrusive",
+      "url": "https://github.com/boostorg/intrusive/blob/master/include/boost/intrusive/treap.hpp",
+      "description": "Boost.Intrusive's treap_impl class template implementing an intrusive treap with key ordering plus priority-based heap ordering, used to build treap_set and treap_multiset."
+    },
+    {
+      "type": "uses",
+      "repo": "boostorg/intrusive",
+      "url": "https://github.com/boostorg/intrusive/blob/master/include/boost/intrusive/treap_set.hpp",
+      "path": "include/boost/intrusive/treap_set.hpp",
+      "description": "Defines the treap_set and treap_multiset container wrappers built on the intrusive treap, exposing priority comparators and unique/equal insertion."
+    },
+    {
+      "type": "implements",
+      "repo": "boostorg/intrusive",
+      "url": "https://github.com/boostorg/intrusive/blob/master/include/boost/intrusive/detail/generic_hook.hpp",
+      "description": "Boost.Intrusive provides bs_set_base_hook and node traits used by the treap node algorithms; the library is the canonical production-grade C++ treap implementation."
+    }
+  ]
+}

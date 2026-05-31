@@ -1,0 +1,31 @@
+{
+  "structure": "union-find",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/data_structures/disjoint_set/disjoint_set.py",
+      "description": "Reference disjoint-set implementation with union by rank and path-related logic in the well-known algorithms collection."
+    },
+    {
+      "type": "implements",
+      "repo": "williamfiset/Algorithms",
+      "url": "https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/datastructures/unionfind/UnionFind.java",
+      "description": "Java Union-Find with path compression and union by size, accompanying a widely used algorithms course repo."
+    },
+    {
+      "type": "uses",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/utils/union_find.py",
+      "description": "NetworkX ships a UnionFind utility class used internally by graph algorithms such as Kruskal's MST and connected-component routines.",
+      "path": "networkx/utils/union_find.py"
+    },
+    {
+      "type": "uses",
+      "repo": "scipy/scipy",
+      "url": "https://github.com/scipy/scipy/blob/main/scipy/sparse/csgraph/_min_spanning_tree.pyx",
+      "description": "SciPy's sparse-graph minimum_spanning_tree uses a disjoint-set / union-find structure inside Kruskal's algorithm.",
+      "path": "scipy/sparse/csgraph/_min_spanning_tree.pyx"
+    }
+  ]
+}

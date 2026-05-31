@@ -1,0 +1,31 @@
+{
+  "structure": "bloom-filter",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "RedisBloom/RedisBloom",
+      "url": "https://github.com/RedisBloom/RedisBloom",
+      "description": "Redis module providing scalable Bloom and Cuckoo filters exposed as native commands (BF.ADD, BF.EXISTS)."
+    },
+    {
+      "type": "uses",
+      "repo": "bitcoin/bitcoin",
+      "url": "https://github.com/bitcoin/bitcoin",
+      "path": "src/common/bloom.h",
+      "description": "Bitcoin Core uses a Bloom filter (CBloomFilter) for SPV clients to request only relevant transactions."
+    },
+    {
+      "type": "uses",
+      "repo": "RedisBloom/RedisBloom",
+      "url": "https://github.com/RedisBloom/RedisBloom",
+      "path": "src/rebloom.c",
+      "description": "Implements the BF.ADD / BF.EXISTS Redis command handlers backed by the Bloom filter core."
+    },
+    {
+      "type": "implements",
+      "repo": "google/leveldb",
+      "url": "https://github.com/google/leveldb",
+      "description": "LevelDB ships a Bloom filter policy (util/bloom.cc) used to skip SSTable reads for absent keys."
+    }
+  ]
+}

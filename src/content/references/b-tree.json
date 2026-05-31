@@ -1,0 +1,25 @@
+{
+  "structure": "b-tree",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "google/btree",
+      "url": "https://github.com/google/btree",
+      "description": "Google's widely-used in-memory B-Tree implementation in Go, designed as an ordered-map replacement."
+    },
+    {
+      "type": "uses",
+      "repo": "etcd-io/etcd",
+      "url": "https://github.com/etcd-io/etcd",
+      "path": "server/storage/mvcc/index.go",
+      "description": "etcd's MVCC key index uses Google's B-Tree to store key revisions for ordered lookups and range queries."
+    },
+    {
+      "type": "uses",
+      "repo": "sqlite/sqlite",
+      "url": "https://github.com/sqlite/sqlite",
+      "path": "src/btree.c",
+      "description": "SQLite stores every table and index as a B-Tree (B+Tree for tables) on disk pages; btree.c is the core implementation."
+    }
+  ]
+}

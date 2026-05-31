@@ -1,0 +1,31 @@
+{
+  "structure": "lru-cache",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "google/guava",
+      "url": "https://github.com/google/guava",
+      "description": "Guava's CacheBuilder provides a size-bounded cache with LRU-style eviction backed by a segmented LinkedHashMap design."
+    },
+    {
+      "type": "implements",
+      "repo": "hashicorp/golang-lru",
+      "url": "https://github.com/hashicorp/golang-lru",
+      "description": "HashiCorp's standalone Go LRU cache library, the canonical hash-map + doubly-linked-list implementation."
+    },
+    {
+      "type": "uses",
+      "repo": "redis/redis",
+      "url": "https://github.com/redis/redis",
+      "description": "Redis uses approximate LRU eviction for the allkeys-lru / volatile-lru maxmemory policies.",
+      "path": "src/evict.c"
+    },
+    {
+      "type": "uses",
+      "repo": "ben-manes/caffeine",
+      "url": "https://github.com/ben-manes/caffeine",
+      "description": "Caffeine's BoundedLocalCache uses access-ordered eviction with ring-buffer batched reads to approximate LRU at high concurrency.",
+      "path": "caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java"
+    }
+  ]
+}

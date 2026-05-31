@@ -1,0 +1,24 @@
+{
+  "structure": "doubly-linked-list",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "torvalds/linux",
+      "url": "https://github.com/torvalds/linux/blob/master/include/linux/list.h",
+      "description": "The kernel's canonical intrusive circular doubly linked list: struct list_head with prev/next pointers and the list_add / list_del primitives used pervasively across the kernel."
+    },
+    {
+      "type": "implements",
+      "repo": "openjdk/jdk",
+      "url": "https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/LinkedList.java",
+      "description": "Java's java.util.LinkedList, a doubly linked list with first/last references and a private Node<E> holding prev/next, backing both the List and Deque interfaces."
+    },
+    {
+      "type": "uses",
+      "repo": "redis/redis",
+      "url": "https://github.com/redis/redis/blob/unstable/src/adlist.h",
+      "description": "Redis's generic doubly linked list (listNode with prev/next, list with head/tail) used in production for client lists, the slowlog, pub/sub, and more.",
+      "path": "src/adlist.h"
+    }
+  ]
+}

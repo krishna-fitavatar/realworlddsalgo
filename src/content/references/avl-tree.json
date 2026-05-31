@@ -1,0 +1,24 @@
+{
+  "structure": "avl-tree",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/data_structures/binary_tree/avl_tree.py",
+      "description": "Clean, well-documented AVL tree implementation with rotation cases in pure Python."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/datastructures/trees/AVLTree.java",
+      "description": "AVL tree implementation in Java with insert, delete, and balance-factor based rotations."
+    },
+    {
+      "type": "uses",
+      "repo": "torvalds/linux",
+      "url": "https://github.com/torvalds/linux/blob/master/lib/rbtree.c",
+      "description": "The Linux kernel uses self-balancing search trees (red-black variant of the AVL family) for ordered in-memory indexes such as VMA and scheduler structures.",
+      "path": "lib/rbtree.c"
+    }
+  ]
+}

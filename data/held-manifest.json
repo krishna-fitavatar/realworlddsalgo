@@ -2,36 +2,130 @@
   "generatedAt": null,
   "written": [
     {
-      "slug": "linked-list",
+      "slug": "doubly-linked-list",
       "kept": 3,
       "dropped": 0
     },
     {
-      "slug": "binary-heap",
+      "slug": "queue",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "deque",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "circular-buffer",
       "kept": 3,
       "dropped": 0
     },
     {
-      "slug": "bfs",
+      "slug": "avl-tree",
+      "kept": 3,
+      "dropped": 1
+    },
+    {
+      "slug": "red-black-tree",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "b-tree",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "segment-tree",
       "kept": 4,
       "dropped": 0
     },
     {
-      "slug": "quick-sort",
+      "slug": "fenwick-tree",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "splay-tree",
       "kept": 4,
       "dropped": 0
     },
     {
-      "slug": "hash-table",
+      "slug": "treap",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "hash-set",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "bloom-filter",
       "kept": 4,
       "dropped": 0
     },
     {
-      "slug": "stack",
+      "slug": "lru-cache",
       "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "count-min-sketch",
+      "kept": 3,
+      "dropped": 1
+    },
+    {
+      "slug": "skip-list",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "union-find",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "adjacency-list",
+      "kept": 3,
+      "dropped": 1
+    },
+    {
+      "slug": "dfs",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "bellman-ford",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "floyd-warshall",
+      "kept": 2,
       "dropped": 0
     }
   ],
   "held": [],
-  "dropped": []
+  "dropped": [
+    {
+      "slug": "avl-tree",
+      "repo": "antirez/redis",
+      "type": "uses",
+      "reason": "url does not point at repo antirez/redis"
+    },
+    {
+      "slug": "count-min-sketch",
+      "repo": "redis/redis",
+      "type": "implements",
+      "reason": "implements url does not match repo redis/redis"
+    },
+    {
+      "slug": "adjacency-list",
+      "repo": "python/cpython",
+      "type": "uses",
+      "reason": "none of [graph, node, edges] found in Lib/functools.py"
+    }
+  ]
 }
