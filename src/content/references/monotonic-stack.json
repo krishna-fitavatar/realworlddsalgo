@@ -1,0 +1,25 @@
+{
+  "structure": "monotonic-stack",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/data_structures/stacks/next_greater_element.py",
+      "description": "Reference monotonic-stack implementation of Next Greater Element in O(n), contrasted with the O(n^2) brute force."
+    },
+    {
+      "type": "uses",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/data_structures/stacks/largest_rectangle_histogram.py",
+      "path": "data_structures/stacks/largest_rectangle_histogram.py",
+      "description": "Largest Rectangle in Histogram solved with an increasing monotonic stack of bar indices."
+    },
+    {
+      "type": "uses",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/data_structures/stacks/stock_span_problem.py",
+      "path": "data_structures/stacks/stock_span_problem.py",
+      "description": "Stock Span problem computed with a monotonic stack of indices."
+    }
+  ]
+}

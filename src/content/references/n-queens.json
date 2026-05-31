@@ -1,0 +1,24 @@
+{
+  "structure": "n-queens",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/backtracking/n_queens.py",
+      "description": "Reference backtracking N-Queens solver with is_safe/solve recursion placing one queen per row."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/uncategorized/n-queens/README.md",
+      "description": "Documents and implements N-Queens via naive, backtracking, and bitwise approaches."
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Lib/test/test_generators.py",
+      "description": "CPython's generator test suite uses an N-Queens solver (class Queens with conjoin) as a real backtracking workload exercising the generator machinery.",
+      "path": "Lib/test/test_generators.py"
+    }
+  ]
+}

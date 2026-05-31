@@ -1,0 +1,18 @@
+{
+  "structure": "coin-change",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/dynamicprogramming/CoinChange.java",
+      "description": "Clean Java implementation with both change() for counting combinations and minimumCoins() for the fewest-coins variant."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/dynamic_programming/minimum_coin_change.py",
+      "description": "Python DP counting implementation building a table over amounts.",
+      "path": "dynamic_programming/minimum_coin_change.py"
+    }
+  ]
+}

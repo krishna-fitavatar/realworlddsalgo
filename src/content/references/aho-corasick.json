@@ -1,0 +1,24 @@
+{
+  "structure": "aho-corasick",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "BurntSushi/aho-corasick",
+      "url": "https://github.com/BurntSushi/aho-corasick",
+      "description": "Canonical, high-performance Rust implementation of Aho-Corasick with NFA and DFA variants and configurable match semantics."
+    },
+    {
+      "type": "implements",
+      "repo": "cloudflare/ahocorasick",
+      "url": "https://github.com/cloudflare/ahocorasick",
+      "description": "Cloudflare's Go implementation using fixed 256-way child/failure arrays and a thread-safe matcher for high-throughput pattern scanning."
+    },
+    {
+      "type": "uses",
+      "repo": "BurntSushi/ripgrep",
+      "url": "https://github.com/BurntSushi/ripgrep/blob/master/crates/globset/Cargo.toml",
+      "description": "ripgrep's globset crate depends on the aho-corasick crate to match many glob literal prefixes efficiently.",
+      "path": "crates/globset/Cargo.toml"
+    }
+  ]
+}

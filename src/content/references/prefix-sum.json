@@ -1,0 +1,31 @@
+{
+  "structure": "prefix-sum",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/data_structures/arrays/prefix_sum.py",
+      "description": "A clean, self-contained PrefixSum class with build and range-sum query methods, including doctests."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms",
+      "description": "Popular educational repo of JavaScript algorithm and data structure implementations covering range-sum and scan techniques."
+    },
+    {
+      "type": "uses",
+      "repo": "numpy/numpy",
+      "url": "https://github.com/numpy/numpy",
+      "path": "numpy/_core/src/umath/loops.c.src",
+      "description": "NumPy's cumsum implements the prefix-sum scan as an accumulate ufunc loop in its core math kernels."
+    },
+    {
+      "type": "uses",
+      "repo": "pytorch/pytorch",
+      "url": "https://github.com/pytorch/pytorch",
+      "path": "aten/src/ATen/native/ReduceOps.cpp",
+      "description": "PyTorch implements torch.cumsum as a cumulative scan operation used throughout tensor and autograd computations."
+    }
+  ]
+}

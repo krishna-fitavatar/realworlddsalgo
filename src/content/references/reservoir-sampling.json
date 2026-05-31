@@ -1,0 +1,24 @@
+{
+  "structure": "reservoir-sampling",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/randomized/ReservoirSampling.java",
+      "description": "Clean, well-commented Java implementation of Algorithm R reservoir sampling with tests."
+    },
+    {
+      "type": "implements",
+      "repo": "keon/algorithms",
+      "url": "https://github.com/keon/algorithms",
+      "description": "Python algorithm collection including a reservoir/random sampling implementation suitable for learning."
+    },
+    {
+      "type": "uses",
+      "repo": "apache/spark",
+      "url": "https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/util/random/SamplingUtils.scala",
+      "description": "Spark uses reservoir sampling (reservoirSampleAndCount) to take fixed-size samples from RDD partitions, e.g. for range-partition boundary estimation.",
+      "path": "core/src/main/scala/org/apache/spark/util/random/SamplingUtils.scala"
+    }
+  ]
+}

@@ -2,154 +2,130 @@
   "generatedAt": null,
   "written": [
     {
-      "slug": "a-star",
-      "kept": 3,
-      "dropped": 1
-    },
-    {
-      "slug": "topological-sort",
-      "kept": 3,
-      "dropped": 1
-    },
-    {
-      "slug": "kruskal-mst",
+      "slug": "kmp",
       "kept": 4,
       "dropped": 0
     },
     {
-      "slug": "prim-mst",
+      "slug": "rabin-karp",
       "kept": 3,
       "dropped": 0
     },
     {
-      "slug": "tarjan-scc",
+      "slug": "z-algorithm",
       "kept": 3,
       "dropped": 0
     },
     {
-      "slug": "ford-fulkerson",
+      "slug": "boyer-moore",
       "kept": 3,
       "dropped": 0
     },
     {
-      "slug": "bubble-sort",
+      "slug": "aho-corasick",
       "kept": 3,
       "dropped": 0
     },
     {
-      "slug": "insertion-sort",
+      "slug": "suffix-array",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "two-pointers",
       "kept": 2,
       "dropped": 0
     },
     {
-      "slug": "selection-sort",
+      "slug": "sliding-window",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "prefix-sum",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "kadane",
       "kept": 3,
       "dropped": 0
     },
     {
-      "slug": "merge-sort",
-      "kept": 4,
-      "dropped": 0
-    },
-    {
-      "slug": "heap-sort",
-      "kept": 4,
-      "dropped": 0
-    },
-    {
-      "slug": "counting-sort",
-      "kept": 2,
-      "dropped": 1
-    },
-    {
-      "slug": "radix-sort",
-      "kept": 3,
-      "dropped": 1
-    },
-    {
-      "slug": "bucket-sort",
+      "slug": "monotonic-stack",
       "kept": 3,
       "dropped": 0
     },
     {
-      "slug": "shell-sort",
-      "kept": 3,
-      "dropped": 1
-    },
-    {
-      "slug": "linear-search",
-      "kept": 4,
-      "dropped": 0
-    },
-    {
-      "slug": "binary-search",
-      "kept": 4,
-      "dropped": 0
-    },
-    {
-      "slug": "jump-search",
-      "kept": 2,
-      "dropped": 0
-    },
-    {
-      "slug": "exponential-search",
-      "kept": 4,
-      "dropped": 0
-    },
-    {
-      "slug": "ternary-search",
-      "kept": 4,
-      "dropped": 0
-    },
-    {
-      "slug": "quickselect",
+      "slug": "dutch-national-flag",
       "kept": 2,
       "dropped": 2
+    },
+    {
+      "slug": "boyer-moore-majority",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "floyd-cycle-detection",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "fisher-yates-shuffle",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "reservoir-sampling",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "knapsack",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "longest-common-subsequence",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "edit-distance",
+      "kept": 2,
+      "dropped": 1
+    },
+    {
+      "slug": "coin-change",
+      "kept": 2,
+      "dropped": 0
+    },
+    {
+      "slug": "n-queens",
+      "kept": 3,
+      "dropped": 0
     }
   ],
   "held": [],
   "dropped": [
     {
-      "slug": "a-star",
-      "repo": "riccardoscalco/pathfinding",
-      "type": "implements",
-      "reason": "implements url does not match repo riccardoscalco/pathfinding"
-    },
-    {
-      "slug": "topological-sort",
+      "slug": "dutch-national-flag",
       "repo": "TheAlgorithms/Java",
-      "type": "implements",
-      "reason": "dead link (url did not resolve)"
-    },
-    {
-      "slug": "counting-sort",
-      "repo": "numpy/numpy",
       "type": "uses",
-      "reason": "could not fetch numpy/numpy:numpy/_core/src/npysort/radixsort.cpp (status 404)"
+      "reason": "could not fetch TheAlgorithms/Java:src/main/java/com/thealgorithms/sorts/DutchNationalFlagSorting.java (status 404)"
     },
     {
-      "slug": "radix-sort",
-      "repo": "numpy/numpy",
-      "type": "uses",
-      "reason": "could not fetch numpy/numpy:numpy/_core/src/npysort/radixsort.cpp (status 404)"
-    },
-    {
-      "slug": "shell-sort",
-      "repo": "git/git",
-      "type": "uses",
-      "reason": "none of [shell, sort, gap] found in compat/regex/regcomp.c"
-    },
-    {
-      "slug": "quickselect",
-      "repo": "rust-lang/rust",
-      "type": "uses",
-      "reason": "could not fetch rust-lang/rust:library/core/src/slice/select.rs (status 404)"
-    },
-    {
-      "slug": "quickselect",
+      "slug": "dutch-national-flag",
       "repo": "trekhleb/javascript-algorithms",
       "type": "implements",
       "reason": "dead link (url did not resolve)"
+    },
+    {
+      "slug": "edit-distance",
+      "repo": "git/git",
+      "type": "uses",
+      "reason": "uses ref has no path (path is required and verified)"
     }
   ]
 }

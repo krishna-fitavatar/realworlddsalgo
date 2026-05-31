@@ -1,0 +1,24 @@
+{
+  "structure": "kadane",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/dynamic_programming/max_subarray_sum.py",
+      "description": "Reference implementation of Kadane's maximum subarray sum in the widely-starred TheAlgorithms collection."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray",
+      "description": "JavaScript implementation with both brute-force and dynamic-programming (Kadane) variants and tests."
+    },
+    {
+      "type": "uses",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/dynamicprogramming/KadaneAlgorithm.java",
+      "path": "src/main/java/com/thealgorithms/dynamicprogramming/KadaneAlgorithm.java",
+      "description": "Java implementation of Kadane's algorithm used in the dynamic-programming module."
+    }
+  ]
+}
