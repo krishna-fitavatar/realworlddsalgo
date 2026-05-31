@@ -1,14 +1,15 @@
 ---
 // TEMPLATE LAYER — the page shell. Holds no data of its own; everything comes
-// in via props or <slot/>.
+// in via props or <slot/>. Visual system is defined in DESIGN.md
+// (IBM Plex superfamily, warm paper + near-black ink + blueprint-blue accent,
+// technical-editorial). Dark mode is automatic via prefers-color-scheme.
 interface Props {
   title: string;
   summary?: string;
 }
 const { title, summary } = Astro.props;
-const tagline = 'Real-world uses of data structures & algorithms';
+const tagline = 'data structures & algorithms, in the real world';
 // Serving subpath; strip any trailing slash so links join cleanly as `${base}/...`
-// (BASE_URL may or may not carry a trailing slash depending on config).
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
@@ -20,92 +21,155 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <meta name="generator" content={Astro.generator} />
     <title>{title} · realworlddsalgo</title>
     {summary && <meta name="description" content={summary} />}
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="site-header">
-      <a href={`${base}/`} class="brand">realworlddsalgo</a>
+      <a href={`${base}/`} class="brand">realworlddsalgo<span class="brand-dot">.</span></a>
       <span class="tagline">{tagline}</span>
     </header>
     <main>
       <slot />
     </main>
     <footer class="site-footer">
-      <p>Open source · static · hosted on GitHub Pages</p>
+      <p>IBM Plex · open source · static · hosted on GitHub Pages</p>
     </footer>
 
     <style is:global>
+      /* === Design tokens (DESIGN.md) === */
       :root {
-        --fg: #111827;
-        --muted: #6b7280;
-        --border: #e5e7eb;
-        --accent: #2563eb;
-        --max: 760px;
+        --paper: #fbfaf7;
+        --ink: #15181e;
+        --muted: #5b6470;
+        --hairline: #e6e3dc;
+        --surface: #f3f1ec;
+        --accent: #1f4e79;
+        --accent-soft: #1f4e790f;
+        --ok: #2e7d52;
+        --warn: #b8860b;
+        --err: #b23a3a;
+        --sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+        --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
+        --max: 720px;
       }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --paper: #15181e;
+          --ink: #e8e6e1;
+          --muted: #98a0ac;
+          --hairline: #2a2f38;
+          --surface: #1e232b;
+          --accent: #5b9bd5;
+          --accent-soft: #5b9bd514;
+        }
+      }
+
       * { box-sizing: border-box; }
       body {
         margin: 0;
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-        color: var(--fg);
-        line-height: 1.6;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
       }
-      main { max-width: var(--max); margin: 0 auto; padding: 1.5rem 1.25rem 3rem; }
+      main { max-width: var(--max); margin: 0 auto; padding: 2rem 1.5rem 3rem; }
+
       .site-header {
         display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap;
-        max-width: var(--max); margin: 0 auto; padding: 1.25rem;
-        border-bottom: 1px solid var(--border);
+        justify-content: space-between;
+        max-width: var(--max); margin: 0 auto; padding: 1.1rem 1.5rem;
+        border-bottom: 1px solid var(--hairline);
       }
-      .brand { font-weight: 700; font-size: 1.1rem; text-decoration: none; color: var(--fg); }
-      .tagline { color: var(--muted); font-size: 0.9rem; }
-      .site-footer { max-width: var(--max); margin: 0 auto; padding: 1.25rem; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
-      a { color: var(--accent); }
-      h1 { margin-bottom: 0.25rem; }
-      .category-tag {
-        display: inline-block; font-size: 0.75rem; text-transform: uppercase;
-        letter-spacing: 0.04em; color: var(--muted); border: 1px solid var(--border);
-        border-radius: 999px; padding: 0.1rem 0.6rem;
+      .brand {
+        font-family: var(--mono); font-weight: 600; font-size: 1rem;
+        letter-spacing: -0.02em; text-decoration: none; color: var(--ink);
       }
-      table.complexity { border-collapse: collapse; margin: 1rem 0; }
-      table.complexity th, table.complexity td { border: 1px solid var(--border); padding: 0.35rem 0.7rem; text-align: left; font-size: 0.9rem; }
-      section { margin-top: 2rem; }
-      section > h2 { border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+      .brand-dot { color: var(--accent); }
+      .tagline {
+        font-family: var(--mono); color: var(--muted); font-size: 0.72rem;
+        text-transform: uppercase; letter-spacing: 0.08em;
+      }
+      .site-footer {
+        max-width: var(--max); margin: 0 auto; padding: 1.2rem 1.5rem;
+        color: var(--muted); font-size: 0.72rem; font-family: var(--mono);
+        border-top: 1px solid var(--hairline);
+      }
 
-      /* viz (island renders outside Astro's scoped styles → global) */
-      /* Astro injects `astro-island { display: contents }`, so the island has
-         no layout box — client:visible's IntersectionObserver never sees it and
-         the viz never hydrates. Override with a higher-specificity selector
-         (descendant + attribute beats Astro's element-only rule) so the island
-         gets a real box and hydration fires. */
+      a { color: var(--accent); }
+      h1 {
+        font-family: var(--mono); font-weight: 600; letter-spacing: -0.03em;
+        font-size: 2.1rem; margin: 0.7rem 0 0.3rem;
+      }
+      h2 {
+        font-family: var(--mono); font-size: 0.78rem; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted);
+      }
+      h3 { font-family: var(--mono); font-size: 0.85rem; }
+      p { margin: 0 0 0.9rem; }
+
+      .category-tag {
+        display: inline-block; font-family: var(--mono); font-size: 0.7rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent);
+        border: 1px solid var(--hairline); border-radius: 999px; padding: 0.15rem 0.6rem;
+      }
+
+      table.complexity {
+        border-collapse: collapse; margin: 1rem 0;
+        font-family: var(--mono); font-size: 0.85rem;
+      }
+      table.complexity th, table.complexity td {
+        border: 1px solid var(--hairline); padding: 0.35rem 0.85rem; text-align: left;
+      }
+      table.complexity td:first-child { color: var(--muted); }
+      table.complexity td:last-child { font-variant-numeric: tabular-nums; }
+
+      section { margin-top: 2.4rem; }
+      section > h2 { border-bottom: 1px solid var(--hairline); padding-bottom: 0.4rem; margin-bottom: 0.9rem; }
+
+      /* viz (island renders outside Astro's scoped styles → global).
+         Astro injects `astro-island { display: contents }`; the higher-specificity
+         selector below gives the island a real box so client:visible hydrates. */
       section[aria-label='visualization'] astro-island { display: block; }
-      .viz { margin: 0; border: 1px solid var(--border); border-radius: 10px; padding: 1rem; }
+      .viz { margin: 0; border: 1px solid var(--hairline); border-radius: 10px; padding: 1rem; }
       .viz-stage { display: flex; justify-content: center; max-height: 52vh; }
-      /* width:auto stops a tall/narrow tree from scaling to full container
-         width (which blew the height past the viewport); max-height caps it. */
       .viz-stage svg { max-width: 100%; max-height: 52vh; width: auto; height: auto; }
       .viz-empty { color: var(--muted); text-align: center; padding: 2rem; }
-      .viz-note { font-size: 0.9rem; color: var(--fg); margin: 0.75rem 0; min-height: 2.5em; }
+      .viz-note { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); margin: 0.75rem 0; min-height: 2.5em; }
       .viz-step { font-weight: 600; color: var(--muted); }
       .viz-controls { display: flex; gap: 0.5rem; }
       .viz-controls button {
-        font: inherit; padding: 0.35rem 0.8rem; border: 1px solid var(--border);
-        background: #f9fafb; border-radius: 6px; cursor: pointer;
+        font-family: var(--mono); font-size: 0.78rem; padding: 0.35rem 0.8rem;
+        border: 1px solid var(--hairline); background: var(--surface); color: var(--ink);
+        border-radius: 6px; cursor: pointer;
       }
       .viz-controls button:disabled { opacity: 0.45; cursor: default; }
 
       .code-disclosure > summary {
-        cursor: pointer; font-weight: 600; padding: 0.4rem 0;
-        list-style: none; color: var(--accent);
+        font-family: var(--mono); cursor: pointer; font-size: 0.82rem;
+        padding: 0.4rem 0; list-style: none; color: var(--accent);
       }
       .code-disclosure > summary::-webkit-details-marker { display: none; }
       .code-disclosure > summary::before { content: '▸ '; }
       .code-disclosure[open] > summary::before { content: '▾ '; }
       .code-disclosure > summary:hover { text-decoration: underline; }
-      .code-disclosure pre { margin-top: 0.5rem; max-height: 60vh; overflow: auto; }
+      .code-disclosure pre { margin-top: 0.5rem; max-height: 60vh; overflow: auto; border-radius: 8px; }
 
       .refs { list-style: none; padding: 0; }
-      .refs li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
-      .refs .repo { font-weight: 600; }
-      .refs .desc { color: var(--fg); }
-      .refs .path { color: var(--muted); font-size: 0.85rem; }
+      .refs li { padding: 0.5rem 0; border-bottom: 1px solid var(--hairline); }
+      .refs .repo { font-family: var(--mono); font-weight: 600; }
+      .refs .desc { color: var(--ink); }
+      .refs .path { font-family: var(--mono); color: var(--muted); font-size: 0.8rem; }
+
+      @media (prefers-reduced-motion: reduce) {
+        * { animation: none !important; transition: none !important; }
+      }
     </style>
   </body>
 </html>
