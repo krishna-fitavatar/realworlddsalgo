@@ -1,0 +1,31 @@
+{
+  "structure": "kruskal-mst",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/graphs/minimum_spanning_tree_kruskal.py",
+      "description": "Reference implementation of Kruskal's MST with edge sorting and union-find."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/kruskal",
+      "description": "Documented JavaScript implementation of Kruskal's algorithm using a DisjointSet."
+    },
+    {
+      "type": "uses",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/tree/mst.py",
+      "path": "networkx/algorithms/tree/mst.py",
+      "description": "NetworkX implements kruskal_mst_edges as one of its production minimum-spanning-tree algorithms."
+    },
+    {
+      "type": "uses",
+      "repo": "scipy/scipy",
+      "url": "https://github.com/scipy/scipy/blob/main/scipy/sparse/csgraph/_min_spanning_tree.pyx",
+      "path": "scipy/sparse/csgraph/_min_spanning_tree.pyx",
+      "description": "SciPy's sparse graph minimum_spanning_tree routine uses a Kruskal-style edge-sort plus union-find approach."
+    }
+  ]
+}

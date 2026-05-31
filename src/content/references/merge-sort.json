@@ -1,0 +1,31 @@
+{
+  "structure": "merge-sort",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/sorts/merge_sort.py",
+      "description": "Clean reference implementation of recursive merge sort in Python with the merge step."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/sorting/merge-sort/MergeSort.js",
+      "description": "Well-documented JavaScript merge sort implementation with explanatory README."
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Objects/listsort.txt",
+      "description": "CPython's list.sort and sorted() use Timsort, an adaptive stable merge sort; listsort.txt documents the merge strategy.",
+      "path": "Objects/listsort.txt"
+    },
+    {
+      "type": "uses",
+      "repo": "torvalds/linux",
+      "url": "https://github.com/torvalds/linux/blob/master/lib/list_sort.c",
+      "description": "The Linux kernel's generic linked-list sort is an iterative bottom-up merge sort used throughout the kernel.",
+      "path": "lib/list_sort.c"
+    }
+  ]
+}

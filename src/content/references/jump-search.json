@@ -1,0 +1,18 @@
+{
+  "structure": "jump-search",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/searches/jump_search.py",
+      "description": "Reference Python implementation using math.sqrt block size with a forward jump loop and linear backscan."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/searches/JumpSearch.java",
+      "description": "Generic Java JumpSearch implementing the SearchAlgorithm interface with blockSize = (int) Math.sqrt(length).",
+      "path": "src/main/java/com/thealgorithms/searches/JumpSearch.java"
+    }
+  ]
+}

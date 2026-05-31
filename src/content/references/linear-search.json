@@ -1,0 +1,31 @@
+{
+  "structure": "linear-search",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/searches/linear_search.py",
+      "description": "Reference implementation of linear search (iterative and recursive) in Python."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/search/linear-search/linearSearch.js",
+      "description": "Educational JavaScript implementation of linear search with a custom comparator."
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Objects/listobject.c",
+      "description": "CPython's list.index and contains use a sequential scan over the list's items array.",
+      "path": "Objects/listobject.c"
+    },
+    {
+      "type": "uses",
+      "repo": "torvalds/linux",
+      "url": "https://github.com/torvalds/linux/blob/master/lib/list_sort.c",
+      "description": "Linux kernel linked-list operations rely on sequential traversal of nodes.",
+      "path": "include/linux/list.h"
+    }
+  ]
+}

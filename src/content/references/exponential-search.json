@@ -1,0 +1,31 @@
+{
+  "structure": "exponential-search",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/searches/exponential_search.py",
+      "description": "Reference Python implementation of exponential search with a binary-search second phase."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search",
+      "description": "Binary search building block used by exponential search, with educational explanations."
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Objects/listobject.c",
+      "description": "CPython's list sort uses galloping (exponential) search to find merge insertion points in its Timsort implementation.",
+      "path": "Objects/listobject.c"
+    },
+    {
+      "type": "uses",
+      "repo": "openjdk/jdk",
+      "url": "https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/TimSort.java",
+      "description": "Java's TimSort uses gallop (exponential) search to accelerate merging of runs.",
+      "path": "src/java.base/share/classes/java/util/TimSort.java"
+    }
+  ]
+}

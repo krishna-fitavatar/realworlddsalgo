@@ -1,0 +1,26 @@
+{
+  "structure": "selection-sort",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/sorts/selection_sort.py",
+      "description": "Reference implementation of selection sort in Python.",
+      "path": "sorts/selection_sort.py"
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/sorts/SelectionSort.java",
+      "description": "Generic selection sort implementation in Java.",
+      "path": "src/main/java/com/thealgorithms/sorts/SelectionSort.java"
+    },
+    {
+      "type": "uses",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/sorting/selection-sort/SelectionSort.js",
+      "description": "Selection sort class extending a shared Sort base used across the project's sorting suite.",
+      "path": "src/algorithms/sorting/selection-sort/SelectionSort.js"
+    }
+  ]
+}

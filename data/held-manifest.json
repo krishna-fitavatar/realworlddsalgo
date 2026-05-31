@@ -2,130 +2,142 @@
   "generatedAt": null,
   "written": [
     {
-      "slug": "doubly-linked-list",
-      "kept": 3,
-      "dropped": 0
-    },
-    {
-      "slug": "queue",
-      "kept": 4,
-      "dropped": 0
-    },
-    {
-      "slug": "deque",
-      "kept": 4,
-      "dropped": 0
-    },
-    {
-      "slug": "circular-buffer",
-      "kept": 3,
-      "dropped": 0
-    },
-    {
-      "slug": "avl-tree",
+      "slug": "a-star",
       "kept": 3,
       "dropped": 1
     },
     {
-      "slug": "red-black-tree",
-      "kept": 3,
-      "dropped": 0
-    },
-    {
-      "slug": "b-tree",
-      "kept": 3,
-      "dropped": 0
-    },
-    {
-      "slug": "segment-tree",
+      "slug": "topological-sort",
       "kept": 4,
       "dropped": 0
     },
     {
-      "slug": "fenwick-tree",
-      "kept": 3,
-      "dropped": 0
-    },
-    {
-      "slug": "splay-tree",
+      "slug": "kruskal-mst",
       "kept": 4,
       "dropped": 0
     },
     {
-      "slug": "treap",
+      "slug": "prim-mst",
       "kept": 3,
       "dropped": 0
     },
     {
-      "slug": "hash-set",
+      "slug": "tarjan-scc",
       "kept": 3,
       "dropped": 0
     },
     {
-      "slug": "bloom-filter",
-      "kept": 4,
-      "dropped": 0
-    },
-    {
-      "slug": "lru-cache",
-      "kept": 4,
-      "dropped": 0
-    },
-    {
-      "slug": "count-min-sketch",
-      "kept": 3,
-      "dropped": 1
-    },
-    {
-      "slug": "skip-list",
+      "slug": "ford-fulkerson",
       "kept": 3,
       "dropped": 0
     },
     {
-      "slug": "union-find",
-      "kept": 4,
-      "dropped": 0
-    },
-    {
-      "slug": "adjacency-list",
-      "kept": 3,
-      "dropped": 1
-    },
-    {
-      "slug": "dfs",
-      "kept": 4,
-      "dropped": 0
-    },
-    {
-      "slug": "bellman-ford",
+      "slug": "bubble-sort",
       "kept": 3,
       "dropped": 0
     },
     {
-      "slug": "floyd-warshall",
+      "slug": "insertion-sort",
       "kept": 2,
       "dropped": 0
+    },
+    {
+      "slug": "selection-sort",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "merge-sort",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "heap-sort",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "counting-sort",
+      "kept": 2,
+      "dropped": 1
+    },
+    {
+      "slug": "radix-sort",
+      "kept": 3,
+      "dropped": 1
+    },
+    {
+      "slug": "bucket-sort",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "shell-sort",
+      "kept": 3,
+      "dropped": 1
+    },
+    {
+      "slug": "linear-search",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "binary-search",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "jump-search",
+      "kept": 2,
+      "dropped": 0
+    },
+    {
+      "slug": "exponential-search",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "ternary-search",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "quickselect",
+      "kept": 3,
+      "dropped": 1
     }
   ],
   "held": [],
   "dropped": [
     {
-      "slug": "avl-tree",
-      "repo": "antirez/redis",
-      "type": "uses",
-      "reason": "url does not point at repo antirez/redis"
-    },
-    {
-      "slug": "count-min-sketch",
-      "repo": "redis/redis",
+      "slug": "a-star",
+      "repo": "riccardoscalco/pathfinding",
       "type": "implements",
-      "reason": "implements url does not match repo redis/redis"
+      "reason": "implements url does not match repo riccardoscalco/pathfinding"
     },
     {
-      "slug": "adjacency-list",
-      "repo": "python/cpython",
+      "slug": "counting-sort",
+      "repo": "numpy/numpy",
       "type": "uses",
-      "reason": "none of [graph, node, edges] found in Lib/functools.py"
+      "reason": "could not fetch numpy/numpy:numpy/_core/src/npysort/radixsort.cpp (status 404)"
+    },
+    {
+      "slug": "radix-sort",
+      "repo": "numpy/numpy",
+      "type": "uses",
+      "reason": "could not fetch numpy/numpy:numpy/_core/src/npysort/radixsort.cpp (status 404)"
+    },
+    {
+      "slug": "shell-sort",
+      "repo": "git/git",
+      "type": "uses",
+      "reason": "none of [shell, sort, gap] found in compat/regex/regcomp.c"
+    },
+    {
+      "slug": "quickselect",
+      "repo": "rust-lang/rust",
+      "type": "uses",
+      "reason": "could not fetch rust-lang/rust:library/core/src/slice/select.rs (status 404)"
     }
   ]
 }

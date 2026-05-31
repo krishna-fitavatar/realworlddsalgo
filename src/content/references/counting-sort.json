@@ -1,0 +1,17 @@
+{
+  "structure": "counting-sort",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/sorts/counting_sort.py",
+      "description": "Reference implementation of counting sort in Python within The Algorithms collection."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/sorting/counting-sort/CountingSort.js",
+      "description": "Annotated JavaScript counting sort implementation with biggest/smallest element bucketing."
+    }
+  ]
+}

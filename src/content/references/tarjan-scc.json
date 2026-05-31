@@ -1,0 +1,26 @@
+{
+  "structure": "tarjan-scc",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx",
+      "description": "NetworkX implements Tarjan's SCC as strongly_connected_components in its components module.",
+      "path": "networkx/algorithms/components/strongly_connected.py"
+    },
+    {
+      "type": "implements",
+      "repo": "scipy/scipy",
+      "url": "https://github.com/scipy/scipy",
+      "description": "SciPy provides connected_components for sparse graphs including strongly connected component labeling.",
+      "path": "scipy/sparse/csgraph/_traversal.pyx"
+    },
+    {
+      "type": "uses",
+      "repo": "python/mypy",
+      "url": "https://github.com/python/mypy",
+      "description": "mypy computes strongly connected components over the module import graph to order type checking of mutually recursive modules.",
+      "path": "mypy/build.py"
+    }
+  ]
+}

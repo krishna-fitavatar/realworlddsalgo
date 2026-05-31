@@ -1,0 +1,24 @@
+{
+  "structure": "bucket-sort",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/sorts/bucket_sort.py",
+      "description": "Reference implementation of bucket sort with configurable bucket count and insertion sort per bucket."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/sorting/bucket-sort/BucketSort.js",
+      "description": "Annotated JavaScript bucket sort implementation with complexity notes and tests."
+    },
+    {
+      "type": "uses",
+      "repo": "scipy/scipy",
+      "url": "https://github.com/scipy/scipy",
+      "path": "scipy/stats/_binned_statistic.py",
+      "description": "Bins values into buckets by value range to compute per-bin statistics, the core distribution-into-buckets primitive underlying bucket sort."
+    }
+  ]
+}
