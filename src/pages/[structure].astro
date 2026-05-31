@@ -65,8 +65,10 @@ const timeRows = Object.entries(time);
 
   {source && (
     <section aria-label="source">
-      <h2>The code behind it</h2>
-      <Code code={source} lang={sourceLang as any} theme="github-light" />
+      <details class="code-disclosure">
+        <summary>Show the code behind it</summary>
+        <Code code={source} lang={sourceLang as any} theme="github-light" />
+      </details>
     </section>
   )}
 
