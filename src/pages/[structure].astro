@@ -1,0 +1,77 @@
+---
+// LOGIC LAYER — one static page per structure, generated from the data files.
+// Holds no hardcoded content; everything is read from the collections.
+import { getCollection, getEntry, render } from 'astro:content';
+import { Code } from 'astro:components';
+import StructureLayout from '../layouts/StructureLayout.astro';
+import ReferenceList from '../components/ReferenceList.astro';
+import BstViz from '../components/viz/BstViz';
+import TrieViz from '../components/viz/TrieViz';
+import DijkstraViz from '../components/viz/DijkstraViz';
+import { sources } from '../lib/algorithms/sources';
+
+export async function getStaticPaths() {
+  const structures = await getCollection('structures');
+  return structures.map((entry) => ({
+    params: { structure: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const refEntry = await getEntry('references', entry.data.slug);
+const refs = refEntry?.data.refs ?? [];
+
+const viz = entry.data.viz;
+const source = entry.data.source ? sources[entry.data.source.module] : null;
+const sourceLang = entry.data.source?.lang ?? 'ts';
+
+const { time, space } = entry.data.complexity;
+const timeRows = Object.entries(time);
+---
+
+<StructureLayout title={entry.data.name} summary={entry.data.summary}>
+  <span class="category-tag">{entry.data.category}</span>
+  <h1>{entry.data.name}</h1>
+  <p>{entry.data.summary}</p>
+
+  <section aria-label="description">
+    <Content />
+  </section>
+
+  <section aria-label="complexity">
+    <h2>Complexity</h2>
+    <table class="complexity">
+      <thead><tr><th>Operation</th><th>Time</th></tr></thead>
+      <tbody>
+        {timeRows.map(([op, cost]) => (
+          <tr><td>{op}</td><td>{cost}</td></tr>
+        ))}
+        <tr><td>space</td><td>{space}</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  {viz && (
+    <section aria-label="visualization">
+      <h2>Visualization</h2>
+      {viz === 'BstViz' && <BstViz client:visible />}
+      {viz === 'TrieViz' && <TrieViz client:visible />}
+      {viz === 'DijkstraViz' && <DijkstraViz client:visible />}
+    </section>
+  )}
+
+  {source && (
+    <section aria-label="source">
+      <h2>The code behind it</h2>
+      <Code code={source} lang={sourceLang as any} theme="github-light" />
+    </section>
+  )}
+
+  <section aria-label="references">
+    <h2>In the real world</h2>
+    <ReferenceList refs={refs} />
+  </section>
+</StructureLayout>

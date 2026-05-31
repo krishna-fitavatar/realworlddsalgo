@@ -1,0 +1,24 @@
+{
+  "structure": "dijkstra",
+  "refs": [
+    {
+      "type": "uses",
+      "repo": "Project-OSRM/osrm-backend",
+      "url": "https://github.com/Project-OSRM/osrm-backend",
+      "description": "Open Source Routing Machine computes driving directions on OpenStreetMap data using shortest-path search (Dijkstra/contraction hierarchies)."
+    },
+    {
+      "type": "implements",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/shortest_paths/weighted.py",
+      "description": "NetworkX's reference Dijkstra implementation (dijkstra_path / _dijkstra_multisource) — heavily commented Python.",
+      "path": "networkx/algorithms/shortest_paths/weighted.py"
+    },
+    {
+      "type": "uses",
+      "repo": "valhalla/valhalla",
+      "url": "https://github.com/valhalla/valhalla",
+      "description": "Valhalla's routing core runs label-correcting shortest-path search (a Dijkstra variant) over a tiled road graph."
+    }
+  ]
+}

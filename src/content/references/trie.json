@@ -1,0 +1,24 @@
+{
+  "structure": "trie",
+  "refs": [
+    {
+      "type": "uses",
+      "repo": "torvalds/linux",
+      "url": "https://github.com/torvalds/linux/blob/master/net/ipv4/fib_trie.c",
+      "description": "The IPv4 routing table is a compressed trie (LC-trie), turning longest-prefix-match into a key-length walk.",
+      "path": "net/ipv4/fib_trie.c"
+    },
+    {
+      "type": "uses",
+      "repo": "apache/lucene",
+      "url": "https://github.com/apache/lucene",
+      "description": "Lucene stores its term dictionary in an FST (a trie-like automaton), enabling fast prefix and term lookups."
+    },
+    {
+      "type": "implements",
+      "repo": "armon/libart",
+      "url": "https://github.com/armon/libart",
+      "description": "Adaptive Radix Tree in C — a space-efficient trie that resizes node fan-out by density. Readable reference."
+    }
+  ]
+}

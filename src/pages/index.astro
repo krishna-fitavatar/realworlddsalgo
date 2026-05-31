@@ -1,0 +1,39 @@
+---
+// LOGIC LAYER — landing page. Lists every structure grouped by category,
+// generated entirely from the structures collection.
+import { getCollection } from 'astro:content';
+import StructureLayout from '../layouts/StructureLayout.astro';
+import { CATEGORIES } from '../content.config';
+
+const structures = await getCollection('structures');
+const sorted = [...structures].sort((a, b) => a.data.name.localeCompare(b.data.name));
+const byCategory = CATEGORIES.map((cat) => ({
+  cat,
+  items: sorted.filter((s) => s.data.category === cat),
+})).filter((g) => g.items.length > 0);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<StructureLayout title="Home">
+  <h1>Data structures &amp; algorithms, in the real world</h1>
+  <p>
+    One page per structure: a short description, a live code-driven
+    visualization, and curated links to open-source projects that implement or
+    use it in production.
+  </p>
+
+  {byCategory.map((g) => (
+    <section aria-label={g.cat}>
+      <h2>{g.cat}</h2>
+      <ul>
+        {g.items.map((s) => (
+          <li>
+            <a href={`${base}/${s.data.slug}`}>{s.data.name}</a> — {s.data.summary}
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+
+  {structures.length === 0 && <p class="viz-empty">No structures yet.</p>}
+</StructureLayout>

@@ -1,0 +1,25 @@
+{
+  "structure": "binary-search-tree",
+  "refs": [
+    {
+      "type": "uses",
+      "repo": "torvalds/linux",
+      "url": "https://github.com/torvalds/linux/blob/master/lib/rbtree.c",
+      "description": "The kernel's red-black tree (a self-balancing BST) backs the CFS scheduler, timers, and many subsystems.",
+      "path": "lib/rbtree.c"
+    },
+    {
+      "type": "uses",
+      "repo": "openjdk/jdk",
+      "url": "https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/TreeMap.java",
+      "description": "java.util.TreeMap is a red-black tree, giving Java its sorted-map and sorted-set implementations.",
+      "path": "src/java.base/share/classes/java/util/TreeMap.java"
+    },
+    {
+      "type": "implements",
+      "repo": "w8r/avl",
+      "url": "https://github.com/w8r/avl",
+      "description": "A compact, fast AVL tree (balanced BST) in JavaScript — a clean reference implementation to read."
+    }
+  ]
+}

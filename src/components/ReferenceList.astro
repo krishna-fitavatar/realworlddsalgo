@@ -1,0 +1,45 @@
+---
+// TEMPLATE LAYER — renders the curated references, grouped by how the repo
+// relates to the structure: `implements` it, or `uses` it in production.
+interface Ref {
+  type: 'implements' | 'uses';
+  repo: string;
+  url: string;
+  description: string;
+  path?: string;
+}
+interface Props {
+  refs: Ref[];
+}
+const { refs } = Astro.props;
+const groups: { key: 'implements' | 'uses'; title: string; items: Ref[] }[] = [
+  { key: 'implements', title: 'Implements it', items: refs.filter((r) => r.type === 'implements') },
+  { key: 'uses', title: 'Uses it in production', items: refs.filter((r) => r.type === 'uses') },
+];
+---
+
+{
+  refs.length === 0 ? (
+    <p class="viz-empty">No references curated yet.</p>
+  ) : (
+    groups.map(
+      (g) =>
+        g.items.length > 0 && (
+          <div>
+            <h3>{g.title}</h3>
+            <ul class="refs">
+              {g.items.map((r) => (
+                <li>
+                  <a class="repo" href={r.url} target="_blank" rel="noopener noreferrer">
+                    {r.repo}
+                  </a>
+                  {r.path && <span class="path"> · {r.path}</span>}
+                  <div class="desc">{r.description}</div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ),
+    )
+  )
+}

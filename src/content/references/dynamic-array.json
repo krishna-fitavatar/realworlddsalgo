@@ -1,0 +1,19 @@
+{
+  "structure": "dynamic-array",
+  "refs": [
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Objects/listobject.c",
+      "description": "CPython's list is a dynamic array; list_resize implements the over-allocation growth policy.",
+      "path": "Objects/listobject.c"
+    },
+    {
+      "type": "uses",
+      "repo": "rust-lang/rust",
+      "url": "https://github.com/rust-lang/rust/blob/master/library/alloc/src/raw_vec/mod.rs",
+      "description": "Rust's Vec grows through RawVec, which doubles capacity on reallocation — a textbook amortized-append implementation.",
+      "path": "library/alloc/src/raw_vec/mod.rs"
+    }
+  ]
+}
