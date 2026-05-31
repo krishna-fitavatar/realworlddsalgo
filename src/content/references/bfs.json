@@ -1,0 +1,31 @@
+{
+  "structure": "bfs",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/graphs/breadth_first_search.py",
+      "description": "Clean, well-documented reference implementation of BFS over an adjacency-list graph with a queue and visited set."
+    },
+    {
+      "type": "implements",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/traversal/breadth_first_search.py",
+      "description": "Production BFS family (bfs_edges, bfs_tree, bfs_layers) in the widely used NetworkX graph library."
+    },
+    {
+      "type": "uses",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/shortest_paths/unweighted.py",
+      "description": "Uses BFS internally to compute single-source shortest paths and path lengths in unweighted graphs.",
+      "path": "networkx/algorithms/shortest_paths/unweighted.py"
+    },
+    {
+      "type": "uses",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/components/connected.py",
+      "description": "Uses BFS to enumerate connected components by traversing each unvisited node's reachable set.",
+      "path": "networkx/algorithms/components/connected.py"
+    }
+  ]
+}

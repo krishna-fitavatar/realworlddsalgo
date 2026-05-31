@@ -1,0 +1,31 @@
+{
+  "structure": "hash-table",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "rust-lang/hashbrown",
+      "url": "https://github.com/rust-lang/hashbrown",
+      "description": "Rust's SwissTable-based HashMap implementation (the engine behind std::collections::HashMap), using open addressing with SIMD-accelerated group probing."
+    },
+    {
+      "type": "implements",
+      "repo": "abseil/abseil-cpp",
+      "url": "https://github.com/abseil/abseil-cpp/blob/master/absl/container/flat_hash_map.h",
+      "description": "Google's Abseil flat_hash_map, the original SwissTable open-addressing hash map with control bytes and SSE-based lookup."
+    },
+    {
+      "type": "uses",
+      "repo": "redis/redis",
+      "url": "https://github.com/redis/redis/blob/unstable/src/dict.c",
+      "description": "Redis core dictionary type backing every keyspace, implemented as an incrementally-rehashing chained hash table.",
+      "path": "src/dict.c"
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Objects/dictobject.c",
+      "description": "CPython's built-in dict type, an open-addressing hash table with perturbation probing that underlies object namespaces and kwargs.",
+      "path": "Objects/dictobject.c"
+    }
+  ]
+}

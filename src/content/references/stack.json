@@ -1,0 +1,31 @@
+{
+  "structure": "stack",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Lib/queue.py",
+      "description": "CPython's LifoQueue in queue.py implements a thread-safe stack on top of a list with put/get following LIFO order."
+    },
+    {
+      "type": "implements",
+      "repo": "openjdk/jdk",
+      "url": "https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/Stack.java",
+      "description": "The JDK's java.util.Stack class, a classic Vector-backed LIFO stack with push, pop, peek, and empty."
+    },
+    {
+      "type": "uses",
+      "repo": "redis/redis",
+      "url": "https://github.com/redis/redis",
+      "path": "src/t_list.c",
+      "description": "Redis implements LPUSH/LPOP list commands that provide stack (LIFO) semantics over its list type."
+    },
+    {
+      "type": "uses",
+      "repo": "git/git",
+      "url": "https://github.com/git/git",
+      "path": "revision.c",
+      "description": "Git's revision walking uses an explicit commit stack for depth-first traversal of the commit graph."
+    }
+  ]
+}

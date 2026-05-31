@@ -1,0 +1,37 @@
+{
+  "generatedAt": null,
+  "written": [
+    {
+      "slug": "linked-list",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "binary-heap",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "bfs",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "quick-sort",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "hash-table",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "stack",
+      "kept": 4,
+      "dropped": 0
+    }
+  ],
+  "held": [],
+  "dropped": []
+}

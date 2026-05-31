@@ -1,0 +1,25 @@
+{
+  "structure": "binary-heap",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Lib/heapq.py",
+      "description": "CPython's standard-library heapq module: a min-heap priority queue with heappush, heappop, and the O(n) heapify, used throughout the Python ecosystem."
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Lib/asyncio/base_events.py",
+      "description": "asyncio's event loop stores scheduled timer callbacks in a heap, popping the earliest-due handle each iteration.",
+      "path": "Lib/asyncio/base_events.py"
+    },
+    {
+      "type": "uses",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/shortest_paths/weighted.py",
+      "description": "NetworkX implements Dijkstra's shortest-path algorithm using a binary heap as the priority queue over candidate distances.",
+      "path": "networkx/algorithms/shortest_paths/weighted.py"
+    }
+  ]
+}
