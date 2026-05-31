@@ -70,10 +70,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       section > h2 { border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
 
       /* viz (island renders outside Astro's scoped styles → global) */
-      /* <astro-island> defaults to display:inline and collapses to zero height,
-         which means client:visible's IntersectionObserver never fires and the
-         viz never hydrates. Force block so it has layout height. */
-      astro-island { display: block; }
+      /* Astro injects `astro-island { display: contents }`, so the island has
+         no layout box — client:visible's IntersectionObserver never sees it and
+         the viz never hydrates. Override with a higher-specificity selector
+         (descendant + attribute beats Astro's element-only rule) so the island
+         gets a real box and hydration fires. */
+      section[aria-label='visualization'] astro-island { display: block; }
       .viz { margin: 0; border: 1px solid var(--border); border-radius: 10px; padding: 1rem; }
       .viz-stage { display: flex; justify-content: center; }
       .viz-stage svg { max-width: 100%; height: auto; }
