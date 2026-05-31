@@ -18,10 +18,15 @@ import type { ArrayStep, GraphStep, TreeStep, TreeNodeView } from '../../lib/alg
  *   array → ArrayView   tree → TreeView   graph → GraphView
  */
 
-const HL = '#f59e0b'; // highlight (amber)
-const VISITED = '#16a34a'; // settled (green)
-const BASE = '#e5e7eb'; // node fill
-const STROKE = '#374151';
+// Colors reference DESIGN.md tokens via CSS vars (defined globally in
+// StructureLayout), so the viz matches the design system and adapts to dark
+// mode automatically. The island renders outside Astro's scoped styles, so the
+// :root vars resolve.
+const HL = 'var(--accent)'; // highlight / current — blueprint blue
+const VISITED = 'var(--ok)'; // settled — design success green
+const BASE = 'var(--surface)'; // node fill
+const STROKE = 'var(--ink)';
+const ON_TEXT = '#fff'; // label on a filled (highlight/visited) node
 
 export function ArrayView({ step }: { step: ArrayStep }) {
   const w = 60;
@@ -32,8 +37,8 @@ export function ArrayView({ step }: { step: ArrayStep }) {
         return (
           <g transform={`translate(${i * w + 4}, 20)`} key={i}>
             <rect width={w - 8} height={44} rx={6} fill={on ? HL : BASE} stroke={STROKE} />
-            <text x={(w - 8) / 2} y={28} text-anchor="middle" font-size="16">{v}</text>
-            <text x={(w - 8) / 2} y={62} text-anchor="middle" font-size="11" fill="#6b7280">{i}</text>
+            <text x={(w - 8) / 2} y={28} text-anchor="middle" font-size="16" fill={on ? ON_TEXT : 'var(--ink)'}>{v}</text>
+            <text x={(w - 8) / 2} y={62} text-anchor="middle" font-size="11" fill="var(--muted)">{i}</text>
           </g>
         );
       })}
@@ -86,7 +91,7 @@ export function TreeView({ step }: { step: TreeStep }) {
           <g transform={`translate(${n.x + offsetX}, ${n.y + 30})`} key={n.data.id}>
             {terminal && <circle r={22} fill="none" stroke={VISITED} stroke-width={2} />}
             <circle r={18} fill={on ? HL : BASE} stroke={STROKE} stroke-width={1.5} />
-            <text text-anchor="middle" dy={5} font-size="14">{n.data.label}</text>
+            <text text-anchor="middle" dy={5} font-size="14" fill={on ? ON_TEXT : 'var(--ink)'}>{n.data.label}</text>
           </g>
         );
       })}
@@ -135,7 +140,7 @@ export function GraphView({ step }: { step: GraphStep }) {
         return (
           <g key={i}>
             <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={STROKE} stroke-width={1.5} />
-            <text x={(a.x + b.x) / 2} y={(a.y + b.y) / 2 - 4} text-anchor="middle" font-size="12" fill="#2563eb">
+            <text x={(a.x + b.x) / 2} y={(a.y + b.y) / 2 - 4} text-anchor="middle" font-size="12" fill="var(--accent)">
               {e.weight}
             </text>
           </g>
@@ -149,8 +154,8 @@ export function GraphView({ step }: { step: GraphStep }) {
         return (
           <g transform={`translate(${p.x}, ${p.y})`} key={n.id}>
             <circle r={20} fill={fill} stroke={STROKE} stroke-width={1.5} />
-            <text text-anchor="middle" dy={5} font-size="14">{n.label}</text>
-            <text text-anchor="middle" dy={36} font-size="12" fill="#6b7280">
+            <text text-anchor="middle" dy={5} font-size="14" fill={current || settled ? ON_TEXT : 'var(--ink)'}>{n.label}</text>
+            <text text-anchor="middle" dy={36} font-size="12" fill="var(--muted)">
               {fmt(step.distances[n.id])}
             </text>
           </g>
