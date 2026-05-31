@@ -56,13 +56,20 @@ const structures = defineCollection({
   }),
 });
 
-const referenceEntry = z.object({
-  type: z.enum(['implements', 'uses']),
-  repo: z.string(), // owner/name
-  url: z.string().url(),
-  description: z.string(), // one line: why this is a good example
-  path: z.string().optional(), // link to the specific file/dir
-});
+const referenceEntry = z
+  .object({
+    type: z.enum(['implements', 'uses']),
+    repo: z.string(), // owner/name
+    url: z.string().url(),
+    description: z.string(), // one line: why this is a good example
+    path: z.string().optional(), // file proving the use; REQUIRED for `uses`
+  })
+  // A `uses` claim must cite a concrete file (grounded by scripts/ground-uses.mjs).
+  // `implements` may omit path (the repo itself is the implementation).
+  .refine((r) => r.type !== 'uses' || (typeof r.path === 'string' && r.path.length > 0), {
+    message: 'a `uses` reference requires a verified `path` (the file proving the use)',
+    path: ['path'],
+  });
 
 const references = defineCollection({
   loader: glob({ pattern: '**/*.json', base: './src/content/references' }),

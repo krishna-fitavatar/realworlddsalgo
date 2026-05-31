@@ -1,0 +1,18 @@
+{
+  "structure": "two-pointers",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/maths/two_pointer.py",
+      "description": "Canonical two-pointer solution to the sorted-array pair-sum problem: indices i and j start at opposite ends and converge based on whether the current sum is below or above the target."
+    },
+    {
+      "type": "uses",
+      "repo": "golang/go",
+      "url": "https://github.com/golang/go/blob/master/src/strings/strings.go",
+      "path": "src/strings/strings.go",
+      "description": "Go's standard strings package trims leading and trailing runes by scanning inward from both ends of the string, the opposing-ends two-pointer pattern."
+    }
+  ]
+}

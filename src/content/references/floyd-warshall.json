@@ -1,0 +1,18 @@
+{
+  "structure": "floyd-warshall",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/shortest_paths/dense.py",
+      "description": "NetworkX's all-pairs shortest path module implementing floyd_warshall, floyd_warshall_predecessor_and_distance, and floyd_warshall_numpy."
+    },
+    {
+      "type": "uses",
+      "repo": "scipy/scipy",
+      "url": "https://github.com/scipy/scipy/blob/main/scipy/sparse/csgraph/_shortest_path.pyx",
+      "description": "SciPy's sparse graph module exposes scipy.sparse.csgraph.floyd_warshall as a production all-pairs shortest path routine, implemented in Cython for speed.",
+      "path": "scipy/sparse/csgraph/_shortest_path.pyx"
+    }
+  ]
+}

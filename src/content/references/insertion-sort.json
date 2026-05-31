@@ -1,0 +1,18 @@
+{
+  "structure": "insertion-sort",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/sorts/insertion_sort.py",
+      "description": "A clean, documented pure-Python implementation of insertion sort with doctests."
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Objects/listsort.txt",
+      "path": "Objects/listsort.txt",
+      "description": "CPython's Timsort design notes describe using binary insertion sort to build the short minrun runs that list.sort() / sorted() are built from."
+    }
+  ]
+}

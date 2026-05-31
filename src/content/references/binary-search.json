@@ -1,0 +1,31 @@
+{
+  "structure": "binary-search",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Lib/bisect.py",
+      "description": "CPython's bisect module: pure-Python bisect_left/bisect_right reference implementations (with a C-accelerated counterpart in _bisectmodule.c)."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/searches/binary_search.py",
+      "description": "Multiple educational binary search variants (iterative, recursive, stdlib bisect) with doctests."
+    },
+    {
+      "type": "uses",
+      "repo": "golang/go",
+      "url": "https://github.com/golang/go/blob/master/src/sort/search.go",
+      "description": "Go standard library sort.Search and SearchInts use binary search over a monotonic predicate.",
+      "path": "src/sort/search.go"
+    },
+    {
+      "type": "uses",
+      "repo": "redis/redis",
+      "url": "https://github.com/redis/redis/blob/unstable/src/t_zset.c",
+      "description": "Redis sorted-set range commands binary-search the skiplist/ziplist representation to locate score boundaries.",
+      "path": "src/t_zset.c"
+    }
+  ]
+}

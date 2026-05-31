@@ -1,0 +1,24 @@
+{
+  "structure": "shell-sort",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/sorts/shell_sort.py",
+      "description": "Reference shell sort implementation with a shrinking gap sequence."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/sorts/ShellSort.java",
+      "description": "Java shell sort implementation using the n/2 gap reduction."
+    },
+    {
+      "type": "uses",
+      "repo": "wolfssl/wolfssl",
+      "url": "https://github.com/wolfSSL/wolfssl",
+      "path": "wolfcrypt/src/asn.c",
+      "description": "wolfSSL's ASN.1 code uses a shell-sort routine to order certificate name/RDN entries in constrained, no-malloc environments."
+    }
+  ]
+}

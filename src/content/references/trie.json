@@ -11,8 +11,9 @@
     {
       "type": "uses",
       "repo": "apache/lucene",
-      "url": "https://github.com/apache/lucene",
-      "description": "Lucene stores its term dictionary in an FST (a trie-like automaton), enabling fast prefix and term lookups."
+      "url": "https://github.com/apache/lucene/blob/main/lucene/core/src/java/org/apache/lucene/util/fst/FST.java",
+      "description": "Lucene stores its term dictionary in an FST (a trie-like automaton), enabling fast prefix and term lookups.",
+      "path": "lucene/core/src/java/org/apache/lucene/util/fst/FST.java"
     },
     {
       "type": "implements",

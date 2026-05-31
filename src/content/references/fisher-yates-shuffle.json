@@ -1,0 +1,31 @@
+{
+  "structure": "fisher-yates-shuffle",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/data_structures/arrays/index_2d_array_in_1d.py",
+      "description": "TheAlgorithms collection contains canonical reference implementations of the Fisher-Yates shuffle across multiple languages."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/sets/fisher-yates/fisherYates.js",
+      "description": "Clean, well-documented JavaScript implementation of the Fisher-Yates shuffle with explanatory README."
+    },
+    {
+      "type": "uses",
+      "repo": "golang/go",
+      "url": "https://github.com/golang/go/blob/master/src/math/rand/rand.go",
+      "description": "Go's standard library implements rand.Shuffle using the Fisher-Yates algorithm.",
+      "path": "src/math/rand/rand.go"
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Lib/random.py",
+      "description": "CPython's random.shuffle uses the Fisher-Yates algorithm iterating from the end of the sequence.",
+      "path": "Lib/random.py"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "structure": "longest-common-subsequence",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/dynamic_programming/longest_common_subsequence.py",
+      "description": "Clean reference DP implementation of LCS with table construction and subsequence backtracking."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/sets/longest-common-subsequence/longestCommonSubsequence.js",
+      "description": "Well-documented JavaScript LCS implementation building the DP matrix and reconstructing the subsequence."
+    },
+    {
+      "type": "uses",
+      "repo": "git/git",
+      "url": "https://github.com/git/git/blob/master/xdiff/xdiffi.c",
+      "description": "Git's diff engine uses the Myers O(ND) longest-common-subsequence / shortest-edit-script algorithm to compute file diffs.",
+      "path": "xdiff/xdiffi.c"
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Lib/difflib.py",
+      "description": "Python's difflib SequenceMatcher finds longest matching/common subsequences to produce human-readable diffs.",
+      "path": "Lib/difflib.py"
+    }
+  ]
+}

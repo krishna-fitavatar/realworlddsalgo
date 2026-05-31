@@ -1,0 +1,31 @@
+{
+  "structure": "splay-tree",
+  "refs": [
+    {
+      "type": "uses",
+      "repo": "freebsd/freebsd-src",
+      "url": "https://github.com/freebsd/freebsd-src/blob/main/sys/sys/tree.h",
+      "path": "sys/sys/tree.h",
+      "description": "FreeBSD's generic intrusive tree header provides the splay-tree macro family used throughout the kernel."
+    },
+    {
+      "type": "uses",
+      "repo": "openbsd/src",
+      "url": "https://github.com/openbsd/src/blob/master/sys/sys/tree.h",
+      "path": "sys/sys/tree.h",
+      "description": "OpenBSD kernel's tree.h defines the original SPLAY_* macros used by kernel subsystems for self-organizing containers."
+    },
+    {
+      "type": "implements",
+      "repo": "w8r/splay-tree",
+      "url": "https://github.com/w8r/splay-tree",
+      "description": "A fast standalone JavaScript splay-tree implementation packaged as a reusable library."
+    },
+    {
+      "type": "implements",
+      "repo": "PetarV-/Algorithms",
+      "url": "https://github.com/PetarV-/Algorithms/blob/master/Data%20Structures/Splay%20Tree.cpp",
+      "description": "A clean C++ reference implementation of a splay tree with zig/zig-zig/zig-zag splaying."
+    }
+  ]
+}

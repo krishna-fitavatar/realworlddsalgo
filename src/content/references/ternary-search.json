@@ -1,0 +1,31 @@
+{
+  "structure": "ternary-search",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/searches/ternary_search.py",
+      "description": "Iterative and recursive ternary search over a sorted array, with a precision-based switch to linear search."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/searches/TernarySearch.java",
+      "description": "Generic recursive ternary search implementing the SearchAlgorithm interface, dividing the sorted range at mid1 and mid2."
+    },
+    {
+      "type": "uses",
+      "repo": "cp-algorithms/cp-algorithms",
+      "url": "https://github.com/cp-algorithms/cp-algorithms/blob/main/src/num_methods/ternary_search.md",
+      "description": "Reference article and C++ implementation using ternary search to maximize a unimodal function with a fixed iteration count.",
+      "path": "src/num_methods/ternary_search.md"
+    },
+    {
+      "type": "uses",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/searches/ternary_search.py",
+      "description": "Module using one_third/two_third split points and a precision constant to drive the ternary search loops.",
+      "path": "searches/ternary_search.py"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "structure": "suffix-array",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "y-256/libdivsufsort",
+      "url": "https://github.com/y-256/libdivsufsort/blob/master/lib/divsufsort.c",
+      "description": "Widely used C library for fast, lightweight suffix array construction (divsufsort), the de facto reference implementation linked by many tools."
+    },
+    {
+      "type": "implements",
+      "repo": "BurntSushi/suffix",
+      "url": "https://github.com/BurntSushi/suffix/blob/master/src/table.rs",
+      "description": "Rust suffix array/table built with the linear-time SA-IS algorithm plus LCP support, exposed as a searchable suffix table."
+    },
+    {
+      "type": "uses",
+      "repo": "lh3/bwa",
+      "url": "https://github.com/lh3/bwa/blob/master/bwt.c",
+      "path": "bwt.c",
+      "description": "BWA genome aligner derives its FM-index/BWT from a suffix array to map DNA reads against reference genomes in production."
+    },
+    {
+      "type": "uses",
+      "repo": "simongog/sdsl-lite",
+      "url": "https://github.com/simongog/sdsl-lite/blob/master/include/sdsl/construct_sa.hpp",
+      "path": "include/sdsl/construct_sa.hpp",
+      "description": "Succinct data structure library that constructs suffix arrays (via divsufsort/SAIS) as the basis for its compressed full-text indexes."
+    }
+  ]
+}

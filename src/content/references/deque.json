@@ -1,0 +1,33 @@
+{
+  "structure": "deque",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Modules/_collectionsmodule.c",
+      "path": "Modules/_collectionsmodule.c",
+      "description": "CPython's collections.deque implemented as a doubly linked list of fixed-size blocks for O(1) appends and pops at both ends."
+    },
+    {
+      "type": "implements",
+      "repo": "gcc-mirror/gcc",
+      "url": "https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/include/bits/stl_deque.h",
+      "path": "libstdc++-v3/include/bits/stl_deque.h",
+      "description": "libstdc++ std::deque implemented as a map of fixed-size node arrays providing O(1) random access and amortized O(1) end operations."
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Lib/asyncio/queues.py",
+      "path": "Lib/asyncio/queues.py",
+      "description": "asyncio's Queue uses collections.deque as the default backing buffer, calling append and popleft for FIFO ordering."
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Lib/sched.py",
+      "path": "Lib/multiprocessing/queues.py",
+      "description": "multiprocessing.Queue holds pending items in a collections.deque buffer, appending new items and using popleft when feeding the underlying pipe."
+    }
+  ]
+}

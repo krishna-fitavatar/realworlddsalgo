@@ -1,0 +1,31 @@
+{
+  "structure": "segment-tree",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/segment-tree",
+      "description": "Clean, well-documented JavaScript implementation of a generic segment tree supporting custom associative operations, with tests."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/data_structures/binary_tree/segment_tree.py",
+      "description": "Python segment tree implementation supporting build, range query, and update operations."
+    },
+    {
+      "type": "uses",
+      "repo": "ClickHouse/ClickHouse",
+      "url": "https://github.com/ClickHouse/ClickHouse",
+      "path": "src/Common/SpaceSaving.h",
+      "description": "ClickHouse's quantile/aggregate machinery uses tree-of-segments style range aggregation structures."
+    },
+    {
+      "type": "uses",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java",
+      "path": "src/main/java/com/thealgorithms/datastructures/trees/SegmentTree.java",
+      "description": "Java segment tree used within the algorithms collection for range-sum queries and point updates."
+    }
+  ]
+}

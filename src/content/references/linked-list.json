@@ -1,0 +1,25 @@
+{
+  "structure": "linked-list",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "torvalds/linux",
+      "url": "https://github.com/torvalds/linux/blob/master/include/linux/list.h",
+      "description": "The Linux kernel's canonical intrusive circular doubly linked list: list_head, list_add, list_del, and the list_for_each iteration macros used throughout the kernel."
+    },
+    {
+      "type": "uses",
+      "repo": "redis/redis",
+      "url": "https://github.com/redis/redis/blob/unstable/src/adlist.c",
+      "path": "src/adlist.c",
+      "description": "Redis's generic doubly linked list (adlist) used internally for client lists, the slow-log, pub/sub clients, and other ordered collections."
+    },
+    {
+      "type": "uses",
+      "repo": "torvalds/linux",
+      "url": "https://github.com/torvalds/linux/blob/master/mm/vmscan.c",
+      "path": "mm/vmscan.c",
+      "description": "Linux memory reclaim walks per-zone LRU page lists as doubly linked lists, splicing pages between active and inactive lists in O(1)."
+    }
+  ]
+}

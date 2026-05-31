@@ -1,0 +1,25 @@
+{
+  "structure": "knapsack",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/dynamic_programming/knapsack.py",
+      "description": "Reference 0/1 knapsack: bottom-up DP table, memoized recursion, and optimal-subset reconstruction."
+    },
+    {
+      "type": "uses",
+      "repo": "google/or-tools",
+      "url": "https://github.com/google/or-tools/blob/stable/ortools/algorithms/knapsack_solver.h",
+      "path": "ortools/algorithms/knapsack_solver.h",
+      "description": "Production optimization library exposing dedicated knapsack solvers including a dynamic-programming variant."
+    },
+    {
+      "type": "uses",
+      "repo": "scipy/scipy",
+      "url": "https://github.com/scipy/scipy/blob/main/scipy/optimize/_milp.py",
+      "path": "scipy/optimize/_milp.py",
+      "description": "Mixed-integer linear programming solver used to model 0/1 knapsack and other integer-selection problems in production."
+    }
+  ]
+}

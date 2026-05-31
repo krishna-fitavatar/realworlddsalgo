@@ -1,0 +1,31 @@
+{
+  "structure": "kmp",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/strings/knuth_morris_pratt.py",
+      "description": "Reference KMP implementation with the failure/LPS table construction and search, in TheAlgorithms collection."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/searches/KMPSearch.java",
+      "description": "Java KMP search implementation including longest-prefix-suffix array computation."
+    },
+    {
+      "type": "uses",
+      "repo": "rust-lang/regex",
+      "url": "https://github.com/rust-lang/regex/blob/master/src/lib.rs",
+      "path": "src/lib.rs",
+      "description": "Rust regex crate uses prefilters and substring-search literal optimizations rooted in KMP-style prefix/failure reasoning for fast matching."
+    },
+    {
+      "type": "uses",
+      "repo": "TheAlgorithms/Go",
+      "url": "https://github.com/TheAlgorithms/Go/blob/master/strings/kmp/kmp.go",
+      "path": "strings/kmp/kmp.go",
+      "description": "Go implementation of KMP pattern matching with the prefix table used for substring search."
+    }
+  ]
+}

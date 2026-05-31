@@ -1,0 +1,26 @@
+{
+  "structure": "a-star",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx",
+      "description": "NetworkX provides astar_path and astar_path_length implementing A* with a pluggable heuristic over its graph data structures.",
+      "path": "networkx/algorithms/shortest_paths/astar.py"
+    },
+    {
+      "type": "uses",
+      "repo": "qiao/PathFinding.js",
+      "url": "https://github.com/qiao/PathFinding.js",
+      "description": "Production grid pathfinding demo and library using the A* finder with configurable heuristics and diagonal movement.",
+      "path": "src/finders/AStarFinder.js"
+    },
+    {
+      "type": "uses",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx",
+      "description": "NetworkX's shortest-path module uses the A* implementation for heuristic-guided routing over arbitrary weighted graphs.",
+      "path": "networkx/algorithms/shortest_paths/astar.py"
+    }
+  ]
+}

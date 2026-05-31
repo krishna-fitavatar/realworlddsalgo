@@ -1,0 +1,25 @@
+{
+  "structure": "circular-buffer",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "facebook/folly",
+      "url": "https://github.com/facebook/folly/blob/main/folly/ProducerConsumerQueue.h",
+      "description": "Folly's ProducerConsumerQueue is a lock-free single-producer/single-consumer ring buffer using atomic read/write indices that wrap at capacity."
+    },
+    {
+      "type": "uses",
+      "repo": "torvalds/linux",
+      "url": "https://github.com/torvalds/linux/blob/master/kernel/trace/ring_buffer.c",
+      "path": "kernel/trace/ring_buffer.c",
+      "description": "The Linux kernel tracing subsystem uses a per-CPU ring buffer with head/tail/commit pages and an overwrite mode for lockless event recording."
+    },
+    {
+      "type": "uses",
+      "repo": "facebook/folly",
+      "url": "https://github.com/facebook/folly/blob/main/folly/ProducerConsumerQueue.h",
+      "path": "folly/ProducerConsumerQueue.h",
+      "description": "Production C++ infrastructure code at Meta wraps the read and write indices modulo size_ to implement the circular queue without locks."
+    }
+  ]
+}

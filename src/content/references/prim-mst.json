@@ -1,0 +1,24 @@
+{
+  "structure": "prim-mst",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/graphs/minimum_spanning_tree_prims.py",
+      "description": "Reference implementation of Prim's MST using a priority queue over graph adjacency lists."
+    },
+    {
+      "type": "uses",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/tree/mst.py",
+      "path": "networkx/algorithms/tree/mst.py",
+      "description": "NetworkX exposes Prim's as a selectable MST algorithm in its production tree module."
+    },
+    {
+      "type": "implements",
+      "repo": "williamfiset/Algorithms",
+      "url": "https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/graphtheory/EagerPrimsAdjacencyList.java",
+      "description": "Eager Prim's MST implementation with an indexed priority queue over an adjacency list."
+    }
+  ]
+}

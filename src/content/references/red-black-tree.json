@@ -1,0 +1,25 @@
+{
+  "structure": "red-black-tree",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "torvalds/linux",
+      "url": "https://github.com/torvalds/linux/blob/master/lib/rbtree.c",
+      "description": "The canonical C red-black tree implementation used throughout the Linux kernel, with insert/erase rebalancing via rotations and recoloring."
+    },
+    {
+      "type": "uses",
+      "repo": "torvalds/linux",
+      "url": "https://github.com/torvalds/linux/blob/master/kernel/sched/fair.c",
+      "path": "kernel/sched/fair.c",
+      "description": "The CFS scheduler stores runnable tasks keyed by virtual runtime in a red-black tree for O(log n) leftmost-task selection."
+    },
+    {
+      "type": "uses",
+      "repo": "openjdk/jdk",
+      "url": "https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/TreeMap.java",
+      "path": "src/java.base/share/classes/java/util/TreeMap.java",
+      "description": "java.util.TreeMap is implemented as a red-black tree, with explicit RED/BLACK coloring and fixAfterInsertion/fixAfterDeletion rebalancing."
+    }
+  ]
+}

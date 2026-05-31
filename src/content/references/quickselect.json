@@ -1,0 +1,18 @@
+{
+  "structure": "quickselect",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/searches/quick_select.py",
+      "description": "Reference Python implementation of quickselect with partitioning and recursion into the target side."
+    },
+    {
+      "type": "uses",
+      "repo": "numpy/numpy",
+      "url": "https://github.com/numpy/numpy/blob/main/numpy/_core/fromnumeric.py",
+      "path": "numpy/_core/fromnumeric.py",
+      "description": "NumPy's partition exposes introselect (a quickselect variant) to place the kth element in sorted position."
+    }
+  ]
+}

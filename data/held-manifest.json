@@ -1,0 +1,131 @@
+{
+  "generatedAt": null,
+  "written": [
+    {
+      "slug": "kmp",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "rabin-karp",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "z-algorithm",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "boyer-moore",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "aho-corasick",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "suffix-array",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "two-pointers",
+      "kept": 2,
+      "dropped": 0
+    },
+    {
+      "slug": "sliding-window",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "prefix-sum",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "kadane",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "monotonic-stack",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "dutch-national-flag",
+      "kept": 2,
+      "dropped": 2
+    },
+    {
+      "slug": "boyer-moore-majority",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "floyd-cycle-detection",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "fisher-yates-shuffle",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "reservoir-sampling",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "knapsack",
+      "kept": 3,
+      "dropped": 0
+    },
+    {
+      "slug": "longest-common-subsequence",
+      "kept": 4,
+      "dropped": 0
+    },
+    {
+      "slug": "edit-distance",
+      "kept": 2,
+      "dropped": 1
+    },
+    {
+      "slug": "coin-change",
+      "kept": 2,
+      "dropped": 0
+    },
+    {
+      "slug": "n-queens",
+      "kept": 3,
+      "dropped": 0
+    }
+  ],
+  "held": [],
+  "dropped": [
+    {
+      "slug": "dutch-national-flag",
+      "repo": "TheAlgorithms/Java",
+      "type": "uses",
+      "reason": "could not fetch TheAlgorithms/Java:src/main/java/com/thealgorithms/sorts/DutchNationalFlagSorting.java (status 404)"
+    },
+    {
+      "slug": "dutch-national-flag",
+      "repo": "trekhleb/javascript-algorithms",
+      "type": "implements",
+      "reason": "dead link (url did not resolve)"
+    },
+    {
+      "slug": "edit-distance",
+      "repo": "git/git",
+      "type": "uses",
+      "reason": "uses ref has no path (path is required and verified)"
+    }
+  ]
+}

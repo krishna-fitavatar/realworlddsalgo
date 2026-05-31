@@ -1,0 +1,26 @@
+{
+  "structure": "bubble-sort",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/sorts/bubble_sort.py",
+      "description": "Reference Python implementation including the swap-free early-exit optimization.",
+      "path": "sorts/bubble_sort.py"
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/sorts/BubbleSort.java",
+      "description": "Generic Java implementation of bubble sort with adjacent-swap logic.",
+      "path": "src/main/java/com/thealgorithms/sorts/BubbleSort.java"
+    },
+    {
+      "type": "uses",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/sorting/bubble-sort/BubbleSort.js",
+      "description": "BubbleSort class extending a shared Sort base, used in the project's algorithm library and test suite.",
+      "path": "src/algorithms/sorting/bubble-sort/BubbleSort.js"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "structure": "rabin-karp",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/strings/rabin_karp.py",
+      "description": "Reference Python implementation with explicit rolling polynomial hash, modulus, and collision verification."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/searches/RabinKarpAlgorithm.java",
+      "description": "Java RabinKarpAlgorithm.search using a prime-modulus rolling hash and character verification on hash matches."
+    },
+    {
+      "type": "uses",
+      "repo": "git/git",
+      "url": "https://github.com/git/git/blob/master/diffcore-delta.c",
+      "description": "Git's rename/copy similarity detection hashes file content chunks with a rolling-hash accumulator and counts shared spans.",
+      "path": "diffcore-delta.c"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "structure": "radix-sort",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/sorts/radix_sort.py",
+      "description": "Reference LSD radix sort implementation in Python using base-10 bucket distribution."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/sorts/RadixSort.java",
+      "description": "Java LSD radix sort with counting sort subroutine over decimal digits."
+    },
+    {
+      "type": "uses",
+      "repo": "rust-lang/rust",
+      "url": "https://github.com/rust-lang/rust/blob/master/library/core/src/slice/sort/stable/mod.rs",
+      "description": "Rust's standard library stable sort machinery includes integer-key radix-style handling in its sort implementation.",
+      "path": "library/core/src/slice/sort/stable/mod.rs"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "structure": "bellman-ford",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/graphs/bellman_ford.py",
+      "description": "Reference implementation of Bellman-Ford with explicit negative-cycle detection."
+    },
+    {
+      "type": "uses",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/shortest_paths/weighted.py",
+      "path": "networkx/algorithms/shortest_paths/weighted.py",
+      "description": "NetworkX exposes Bellman-Ford shortest-path and negative-cycle functions used across its graph analysis API."
+    },
+    {
+      "type": "implements",
+      "repo": "keon/algorithms",
+      "url": "https://github.com/keon/algorithms/blob/master/algorithms/graph/bellman_ford.py",
+      "description": "Compact educational Bellman-Ford implementation in Python."
+    }
+  ]
+}

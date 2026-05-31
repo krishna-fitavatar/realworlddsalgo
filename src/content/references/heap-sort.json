@@ -1,0 +1,31 @@
+{
+  "structure": "heap-sort",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/sorts/heap_sort.py",
+      "description": "Reference implementation of heap sort with build-heap and sift-down phases."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/heap-sort",
+      "description": "Heap sort implementation with explanation, built on a shared MinHeap structure."
+    },
+    {
+      "type": "uses",
+      "repo": "gcc-mirror/gcc",
+      "url": "https://github.com/gcc-mirror/gcc/blob/master/libstdc%2B%2B-v3/include/bits/stl_heap.h",
+      "description": "libstdc++ heap primitives (__push_heap/__adjust_heap) that std::sort_heap and introsort's heapsort fallback rely on.",
+      "path": "libstdc++-v3/include/bits/stl_heap.h"
+    },
+    {
+      "type": "uses",
+      "repo": "torvalds/linux",
+      "url": "https://github.com/torvalds/linux/blob/master/lib/sort.c",
+      "description": "Linux kernel's generic sort() uses heapsort for guaranteed O(n log n) worst-case behavior in kernel space.",
+      "path": "lib/sort.c"
+    }
+  ]
+}

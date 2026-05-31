@@ -1,0 +1,24 @@
+{
+  "structure": "boyer-moore-majority",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/misc/MedianOfRunningArray.java",
+      "description": "TheAlgorithms collection of canonical algorithm implementations in Java."
+    },
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms",
+      "description": "Widely-referenced repository of JavaScript algorithm and data structure implementations with explanations."
+    },
+    {
+      "type": "uses",
+      "repo": "apache/spark",
+      "url": "https://github.com/apache/spark",
+      "path": "core/src/main/scala/org/apache/spark/util/BoundedPriorityQueue.scala",
+      "description": "Spark uses bounded/streaming frequency structures for top-k style aggregation."
+    }
+  ]
+}

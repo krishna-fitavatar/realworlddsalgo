@@ -1,0 +1,31 @@
+{
+  "structure": "sliding-window",
+  "refs": [
+    {
+      "type": "uses",
+      "repo": "envoyproxy/ratelimit",
+      "url": "https://github.com/envoyproxy/ratelimit/blob/main/src/limiter/cache_key.go",
+      "path": "src/limiter/cache_key.go",
+      "description": "Envoy's distributed rate limit service keys counters by a time-window divider, the fixed-window sliding-counter approach to rate limiting at scale."
+    },
+    {
+      "type": "uses",
+      "repo": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus/blob/main/promql/engine.go",
+      "path": "promql/engine.go",
+      "description": "PromQL's engine evaluates range-vector functions (rate, increase, moving aggregates) over a trailing time window that slides across each evaluation step."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python",
+      "description": "Educational reference implementations including sliding-window solutions for subarray sum and substring problems."
+    },
+    {
+      "type": "implements",
+      "repo": "keon/algorithms",
+      "url": "https://github.com/keon/algorithms",
+      "description": "Python algorithm library with two-pointer / sliding-window implementations for array and string range problems."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "structure": "queue",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Lib/queue.py",
+      "description": "CPython's standard-library Queue class, a thread-safe FIFO queue built on collections.deque with condition variables for blocking get/put."
+    },
+    {
+      "type": "implements",
+      "repo": "openjdk/jdk",
+      "url": "https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/concurrent/ArrayBlockingQueue.java",
+      "description": "JDK's ArrayBlockingQueue: a bounded FIFO queue backed by a circular array with put/take blocking semantics."
+    },
+    {
+      "type": "uses",
+      "repo": "celery/celery",
+      "url": "https://github.com/celery/celery/blob/main/celery/worker/consumer/consumer.py",
+      "description": "Celery's worker consumer pulls tasks off the broker queue for execution.",
+      "path": "celery/worker/consumer/consumer.py"
+    },
+    {
+      "type": "uses",
+      "repo": "redis/redis",
+      "url": "https://github.com/redis/redis/blob/unstable/src/t_list.c",
+      "description": "Redis list type backs LPUSH/RPOP queue patterns used for job and message queues.",
+      "path": "src/t_list.c"
+    }
+  ]
+}

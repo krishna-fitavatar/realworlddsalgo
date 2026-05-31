@@ -1,0 +1,24 @@
+{
+  "structure": "boyer-moore",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "golang/go",
+      "url": "https://github.com/golang/go/blob/master/src/strings/search.go",
+      "description": "Go standard library's stringFinder implements Boyer-Moore with explicit bad-character and good-suffix skip tables, used by strings.Index for multi-byte patterns."
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Objects/stringlib/fastsearch.h",
+      "path": "Objects/stringlib/fastsearch.h",
+      "description": "CPython's core string search (str.find, str.index, the in operator) uses a Boyer-Moore/Horspool hybrid with a Bloom-filter skip table, falling back to Two-Way for the worst case."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/strings/boyer_moore_search.py",
+      "description": "Educational, self-contained Python implementation of Boyer-Moore using the bad-character heuristic."
+    }
+  ]
+}

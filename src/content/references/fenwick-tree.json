@@ -1,0 +1,24 @@
+{
+  "structure": "fenwick-tree",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/datastructures/trees/FenwickTree.java",
+      "description": "Clean reference implementation of a Fenwick tree with update and query operations using lowest-set-bit arithmetic."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/data_structures/binary_tree/fenwick_tree.py",
+      "description": "Python Fenwick tree implementation with O(n) build, prefix query, and point update."
+    },
+    {
+      "type": "uses",
+      "repo": "indradb/indradb",
+      "url": "https://github.com/indradb/indradb",
+      "path": "lib/src/util.rs",
+      "description": "Graph database utilities; Fenwick-style cumulative indexing."
+    }
+  ]
+}

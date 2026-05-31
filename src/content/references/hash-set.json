@@ -1,0 +1,24 @@
+{
+  "structure": "hash-set",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Objects/setobject.c",
+      "description": "CPython's built-in set/frozenset, an open-addressing hash set with a small embedded table and perturbation-based probing."
+    },
+    {
+      "type": "implements",
+      "repo": "openjdk/jdk",
+      "url": "https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/HashSet.java",
+      "description": "Java's HashSet, implemented as a thin wrapper over a HashMap that maps each element to a shared PRESENT sentinel object."
+    },
+    {
+      "type": "uses",
+      "repo": "django/django",
+      "url": "https://github.com/django/django/blob/main/django/db/models/query_utils.py",
+      "description": "Django ORM uses Python sets to track selected/deferred field names and deduplicate lookups during query construction.",
+      "path": "django/db/models/query_utils.py"
+    }
+  ]
+}

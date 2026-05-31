@@ -1,0 +1,26 @@
+{
+  "structure": "floyd-cycle-detection",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/data_structures/linked_list/floyds_cycle_detection.py",
+      "path": "data_structures/linked_list/floyds_cycle_detection.py",
+      "description": "Dedicated tortoise-and-hare implementation over a linked list, with detect_cycle advancing slow_pointer one node and fast_pointer two nodes until they meet."
+    },
+    {
+      "type": "uses",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/datastructures/lists/SinglyLinkedList.java",
+      "path": "src/main/java/com/thealgorithms/datastructures/lists/SinglyLinkedList.java",
+      "description": "A full singly linked list data structure whose detectLoop() method embeds Floyd's algorithm using currentNodeSlow and currentNodeFast pointers to detect a loop."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/datastructures/lists/SinglyLinkedList.java",
+      "path": "src/main/java/com/thealgorithms/datastructures/lists/SinglyLinkedList.java",
+      "description": "Reference Java implementation of Floyd's tortoise-and-hare loop detection on a singly linked list."
+    }
+  ]
+}

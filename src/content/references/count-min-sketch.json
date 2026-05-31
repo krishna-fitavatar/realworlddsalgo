@@ -1,0 +1,25 @@
+{
+  "structure": "count-min-sketch",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "addthis/stream-lib",
+      "url": "https://github.com/addthis/stream-lib",
+      "description": "Java stream-summary library with a well-documented CountMinSketch implementation (src/main/java/com/clearspring/analytics/stream/frequency/CountMinSketch.java)."
+    },
+    {
+      "type": "uses",
+      "repo": "apache/spark",
+      "url": "https://github.com/apache/spark",
+      "path": "common/sketch/src/main/java/org/apache/spark/util/sketch/CountMinSketch.java",
+      "description": "Spark uses Count-Min Sketch internally and exposes DataFrame.stat.countMinSketch for approximate frequency estimation."
+    },
+    {
+      "type": "uses",
+      "repo": "twitter/algebird",
+      "url": "https://github.com/twitter/algebird",
+      "path": "algebird-core/src/main/scala/com/twitter/algebird/CountMinSketch.scala",
+      "description": "Twitter's Algebird provides a monoid-based Count-Min Sketch used in Scalding/Summingbird production aggregation pipelines."
+    }
+  ]
+}

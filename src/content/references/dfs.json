@@ -1,0 +1,31 @@
+{
+  "structure": "dfs",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "trekhleb/javascript-algorithms",
+      "url": "https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search",
+      "description": "Clean, well-documented JavaScript implementation of DFS with callbacks for entering/leaving vertices and edges."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/graphs/depth_first_search.py",
+      "description": "Reference recursive and iterative DFS implementations in Python with an adjacency-list graph."
+    },
+    {
+      "type": "uses",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/traversal/depth_first_search.py",
+      "description": "NetworkX's production DFS module providing dfs_edges, dfs_tree, dfs_preorder_nodes, and dfs_postorder_nodes used throughout the library.",
+      "path": "networkx/algorithms/traversal/depth_first_search.py"
+    },
+    {
+      "type": "uses",
+      "repo": "python/cpython",
+      "url": "https://github.com/python/cpython/blob/main/Lib/graphlib.py",
+      "description": "CPython's standard-library topological sorter performs a depth-first traversal to detect cycles and order nodes.",
+      "path": "Lib/graphlib.py"
+    }
+  ]
+}

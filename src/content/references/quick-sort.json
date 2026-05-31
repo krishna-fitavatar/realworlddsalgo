@@ -1,0 +1,31 @@
+{
+  "structure": "quick-sort",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/sorts/quick_sort.py",
+      "description": "Clear reference implementation of quick sort with pivot selection in Python."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Java",
+      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/sorts/QuickSort.java",
+      "description": "Quick sort implementation with partition routine in Java."
+    },
+    {
+      "type": "uses",
+      "repo": "openjdk/jdk",
+      "url": "https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/DualPivotQuicksort.java",
+      "description": "OpenJDK uses a dual-pivot quicksort as the implementation behind Arrays.sort for primitive arrays.",
+      "path": "src/java.base/share/classes/java/util/DualPivotQuicksort.java"
+    },
+    {
+      "type": "uses",
+      "repo": "v8/v8",
+      "url": "https://github.com/v8/v8/blob/main/third_party/v8/builtins/array-sort.tq",
+      "description": "V8's Array.prototype.sort implementation uses quicksort logic alongside insertion sort for JavaScript array sorting.",
+      "path": "third_party/v8/builtins/array-sort.tq"
+    }
+  ]
+}

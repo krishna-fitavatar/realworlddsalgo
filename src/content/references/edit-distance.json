@@ -1,0 +1,18 @@
+{
+  "structure": "edit-distance",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/dynamic_programming/edit_distance.py",
+      "description": "Clean dynamic-programming implementation of Levenshtein edit distance with both top-down memoized and bottom-up table variants."
+    },
+    {
+      "type": "uses",
+      "repo": "seatgeek/thefuzz",
+      "url": "https://github.com/seatgeek/thefuzz/blob/master/thefuzz/fuzz.py",
+      "path": "thefuzz/fuzz.py",
+      "description": "Popular fuzzy string matching library whose similarity ratios are computed from edit-distance over the input strings."
+    }
+  ]
+}

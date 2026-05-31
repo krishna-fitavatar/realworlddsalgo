@@ -1,0 +1,25 @@
+{
+  "structure": "ford-fulkerson",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/flow/edmondskarp.py",
+      "description": "NetworkX's Edmonds-Karp implementation, the BFS-based shortest-augmenting-path refinement of Ford-Fulkerson operating on a residual network."
+    },
+    {
+      "type": "uses",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/flow/maxflow.py",
+      "path": "networkx/algorithms/flow/maxflow.py",
+      "description": "NetworkX's public maximum_flow / minimum_cut API dispatches to Ford-Fulkerson-family solvers (edmonds_karp default)."
+    },
+    {
+      "type": "uses",
+      "repo": "scipy/scipy",
+      "url": "https://github.com/scipy/scipy/blob/main/scipy/sparse/csgraph/_flow.pyx",
+      "path": "scipy/sparse/csgraph/_flow.pyx",
+      "description": "SciPy's sparse graph maximum_flow routine implements augmenting-path max flow (Edmonds-Karp / Dinic) over residual capacities."
+    }
+  ]
+}

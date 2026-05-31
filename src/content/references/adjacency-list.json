@@ -1,0 +1,24 @@
+{
+  "structure": "adjacency-list",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx",
+      "description": "NetworkX stores every graph internally as an adjacency-list-style dict-of-dicts (the _adj attribute), the canonical Python graph library."
+    },
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python",
+      "description": "Reference adjacency-list graph implementations and traversals in the widely-used algorithms collection."
+    },
+    {
+      "type": "uses",
+      "repo": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx",
+      "path": "networkx/classes/graph.py",
+      "description": "Core Graph class backs vertices and edges with nested adjacency dictionaries (_adj / _node)."
+    }
+  ]
+}

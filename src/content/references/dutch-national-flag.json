@@ -1,0 +1,18 @@
+{
+  "structure": "dutch-national-flag",
+  "refs": [
+    {
+      "type": "implements",
+      "repo": "TheAlgorithms/Python",
+      "url": "https://github.com/TheAlgorithms/Python/blob/master/sorts/dutch_national_flag_sort.py",
+      "description": "Standalone, well-documented Python implementation of the three-pointer Dutch National Flag sort with doctests."
+    },
+    {
+      "type": "uses",
+      "repo": "openjdk/jdk",
+      "url": "https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/DualPivotQuicksort.java",
+      "description": "JDK's Arrays.sort primitive backend uses three-way partitioning (less/great pointers around a pivot) to handle many equal keys efficiently.",
+      "path": "src/java.base/share/classes/java/util/DualPivotQuicksort.java"
+    }
+  ]
+}
