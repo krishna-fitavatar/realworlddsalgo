@@ -12,6 +12,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { structureTokens, groundStructure } from './ground-uses.mjs';
+import { checkUrlAlive } from './lib/github.mjs';
 
 const STRUCT_DIR = 'src/content/structures';
 const REF_DIR = 'src/content/references';
@@ -59,7 +60,15 @@ async function main() {
 
   for (const s of structures) {
     const tokens = structureTokens({ name: s.name, slug: s.slug });
-    const { kept, dropped } = await groundStructure({ refs: s.references, tokens }, { token, cache });
+    const ground = await groundStructure({ refs: s.references, tokens }, { token, cache });
+    const dropped = [...ground.dropped];
+    // Liveness pass: every surviving ref's URL must resolve (catches dead
+    // `implements` links the url↔repo check can't — moved/renamed files).
+    const kept = [];
+    for (const ref of ground.kept) {
+      if (await checkUrlAlive(ref.url, { token })) kept.push(ref);
+      else dropped.push({ ...ref, reason: 'dead link (url did not resolve)' });
+    }
     for (const d of dropped) droppedAll.push({ slug: s.slug, repo: d.repo, type: d.type, reason: d.reason });
 
     if (kept.length === 0) {

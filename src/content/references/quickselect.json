@@ -8,12 +8,6 @@
       "description": "Reference Python implementation of quickselect with partitioning and recursion into the target side."
     },
     {
-      "type": "implements",
-      "repo": "trekhleb/javascript-algorithms",
-      "url": "https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/quick-select",
-      "description": "Annotated JavaScript quickselect implementation with complexity notes and tests."
-    },
-    {
       "type": "uses",
       "repo": "numpy/numpy",
       "url": "https://github.com/numpy/numpy/blob/main/numpy/_core/fromnumeric.py",

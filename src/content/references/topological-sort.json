@@ -8,12 +8,6 @@
       "description": "Kahn's BFS-based topological sort implementation using in-degree counting."
     },
     {
-      "type": "implements",
-      "repo": "TheAlgorithms/Java",
-      "url": "https://github.com/TheAlgorithms/Java/blob/master/src/main/java/com/thealgorithms/datastructures/graphs/TopologicalSort.java",
-      "description": "DFS and Kahn's algorithm topological sort over an adjacency-list graph."
-    },
-    {
       "type": "uses",
       "repo": "python/cpython",
       "url": "https://github.com/python/cpython/blob/main/Lib/graphlib.py",

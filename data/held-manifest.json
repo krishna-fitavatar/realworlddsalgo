@@ -8,8 +8,8 @@
     },
     {
       "slug": "topological-sort",
-      "kept": 4,
-      "dropped": 0
+      "kept": 3,
+      "dropped": 1
     },
     {
       "slug": "kruskal-mst",
@@ -103,8 +103,8 @@
     },
     {
       "slug": "quickselect",
-      "kept": 3,
-      "dropped": 1
+      "kept": 2,
+      "dropped": 2
     }
   ],
   "held": [],
@@ -114,6 +114,12 @@
       "repo": "riccardoscalco/pathfinding",
       "type": "implements",
       "reason": "implements url does not match repo riccardoscalco/pathfinding"
+    },
+    {
+      "slug": "topological-sort",
+      "repo": "TheAlgorithms/Java",
+      "type": "implements",
+      "reason": "dead link (url did not resolve)"
     },
     {
       "slug": "counting-sort",
@@ -138,6 +144,12 @@
       "repo": "rust-lang/rust",
       "type": "uses",
       "reason": "could not fetch rust-lang/rust:library/core/src/slice/select.rs (status 404)"
+    },
+    {
+      "slug": "quickselect",
+      "repo": "trekhleb/javascript-algorithms",
+      "type": "implements",
+      "reason": "dead link (url did not resolve)"
     }
   ]
 }
