@@ -8,6 +8,7 @@
 // than at 60), on a schedule via .github/workflows/linkcheck.yml.
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
+import { checkUrlAlive } from './lib/github.mjs';
 
 const REF_DIR = 'src/content/references';
 const OFFLINE = process.argv.includes('--offline');
@@ -31,15 +32,10 @@ function wellFormed(url) {
   }
 }
 
-async function alive(url) {
-  const opts = { redirect: 'follow', headers: { 'user-agent': 'realworlddsalgo-linkcheck' } };
-  try {
-    let res = await fetch(url, { method: 'HEAD', ...opts });
-    if (res.status === 405 || res.status === 403) res = await fetch(url, { method: 'GET', ...opts });
-    return res.status < 400;
-  } catch {
-    return false;
-  }
+// Liveness via the shared GitHub-aware helper: authenticated (lifts the 403/429
+// rate-limit blind spot the standalone checker had) with HEAD→GET fallback.
+function alive(url) {
+  return checkUrlAlive(url);
 }
 
 const urls = await collectUrls();
